@@ -1,1 +1,85 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Local AI Coding Lab | LetMeTryThis.dev</title><link rel="stylesheet" href="../assets/css/styles.css"><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"></head><body><main class="page-shell"><p class="eyebrow">Projekt</p><h1>Local AI Coding Lab</h1><p>Notizen fuer lokale AI-Coding-Setups, Modelle, VS Code Integration und Prompting-Experimente.</p><p><a class="button button-secondary" href="../index.html#projects">Zurueck zu Projekten</a></p></main></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CheckMicrosoftEndpoints – PowerShell-Skript zur Erreichbarkeitspruefung aller Microsoft-Endpunkte fuer Intune, Defender, WUfB, Autopatch und Entra." />
+  <title>CheckMicrosoftEndpoints | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <nav class="main-nav visible" aria-label="Navigation">
+      <a href="../index.html#projects">Projekte</a>
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#blog">Blog</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <p class="eyebrow">PowerShell · Netzwerkdiagnose · Intune</p>
+    <h1>CheckMicrosoftEndpoints</h1>
+    <p>
+      Prueft alle Microsoft-Endpunkte, die fuer Intune, Defender, Windows Update for Business,
+      Windows Autopatch, Entra ID und Microsoft 365 benoetigt werden – inklusive HTML-Bericht.
+    </p>
+
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+      <span class="status-pill">⭐ 2 Stars</span>
+      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v2.1</span>
+      <span class="status-pill" style="background:#dcfce7;color:#166534;">GPL-3.0</span>
+    </div>
+
+    <h2>Was es macht</h2>
+    <p>
+      Das Skript testet TCP-Verbindungen zu allen relevanten Microsoft Cloud-Endpunkten,
+      misst Latenz und Downloadgeschwindigkeit und erzeugt einen professionellen HTML-Bericht
+      im Microsoft Design Language-Stil.
+    </p>
+
+    <h2>Unterstuetzte Services</h2>
+    <ul class="check-list">
+      <li>Windows Update for Business &amp; Windows Autopatch</li>
+      <li>Microsoft Intune (Device Management)</li>
+      <li>Microsoft Defender (Threat Protection)</li>
+      <li>Azure Active Directory / Entra ID</li>
+      <li>Microsoft 365, Microsoft Store, Microsoft Edge</li>
+      <li>Windows Activation &amp; Windows Telemetry</li>
+    </ul>
+
+    <h2>HTML-Report Features</h2>
+    <ul class="check-list">
+      <li><strong>Dashboard</strong> – Statistik-Karten, Erfolgs-/Fehlerrate, Performance-Metriken</li>
+      <li><strong>Color-coded Status</strong> – OK / FAILED auf einen Blick</li>
+      <li><strong>Latenz-Bewertung</strong> – Excellent / Good / Needs Improvement</li>
+      <li><strong>Responsive Design</strong> – Funktioniert auf Desktop, Tablet, Mobile</li>
+      <li><strong>Print-optimiert</strong> – Fuer PDF-Export geeignet</li>
+    </ul>
+
+    <h2>Schnellstart</h2>
+    <pre style="background:var(--surface-strong);border:1px solid var(--line);border-radius:12px;padding:1rem;overflow-x:auto;font-size:.875rem;"><code># Alle Services testen mit HTML-Report
+.\CheckMicrosoftEndpointsV2.ps1 -Services All -HtmlReport -OpenReport
+
+# Nur Intune und Defender
+.\CheckMicrosoftEndpointsV2.ps1 -Services Intune,Defender -HtmlReport
+
+# Interaktiver Modus
+.\CheckMicrosoftEndpointsV2.ps1</code></pre>
+
+    <h2>Anforderungen</h2>
+    <p>PowerShell 7+ · Windows 10/11 oder Windows Server 2016+ · Administrator-Rechte</p>
+
+    <p>
+      <a class="button" href="https://github.com/roalhelm/CheckMicrosoftEndpoints" rel="noopener" target="_blank">GitHub ansehen</a>
+      <a class="button button-secondary" href="../index.html#projects">Alle Projekte</a>
+    </p>
+  </main>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,79 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Intune Script Toolkit | LetMeTryThis.dev</title><link rel="stylesheet" href="../assets/css/styles.css"><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"></head><body><main class="page-shell"><p class="eyebrow">Projekt</p><h1>Intune Script Toolkit</h1><p>Eine Projektseite fuer PowerShell- und Graph-API-Skripte rund um Endpoint Management.</p><p><a class="button button-secondary" href="../index.html#projects">Zurueck zu Projekten</a></p></main></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WindowsAutopatchFix – Intelligente Erkennung und Reparatur von Windows Update-Fehlern als Intune Proactive Remediation." />
+  <title>WindowsAutopatchFix | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <nav class="main-nav visible" aria-label="Navigation">
+      <a href="../index.html#projects">Projekte</a>
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#blog">Blog</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <p class="eyebrow">PowerShell · Intune · Windows Autopatch</p>
+    <h1>WindowsAutopatchFix</h1>
+    <p>
+      Intelligente Erkennung und Reparatur von Windows Update-Fehlern als Intune Proactive Remediation.
+      Fuehrt nur aus, was wirklich defekt ist – kein unnötiger Eingriff ins System.
+    </p>
+
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+      <span class="status-pill">⭐ 8 Stars</span>
+      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v3.3 / v2.2</span>
+      <span class="status-pill" style="background:#fef3c7;color:#92400e;">MIT License</span>
+    </div>
+
+    <h2>Was es macht</h2>
+    <p>
+      Das Skript besteht aus zwei Teilen: <code>detection.ps1</code> prueft, ob Windows Update Probleme vorliegen,
+      und <code>remediation.ps1</code> behebt sie gezielt. 15 unabhaengig konfigurierbare Reparaturschritte
+      werden nur ausgefuehrt, wenn sie benoetigt werden.
+    </p>
+
+    <h2>Features</h2>
+    <ul class="check-list">
+      <li><strong>Smart Detection</strong> – DLL-Versionspruefung, BitLocker-Status, Service-Abhaengigkeiten, Fehlercode-Dictionary (20+ Codes)</li>
+      <li><strong>15 konfigurierbare Reparaturschritte</strong> – Registry-Cleanup, DLL-Reregistrierung, WSUS-Artefakte entfernen, Autopatch-Check u.v.m.</li>
+      <li><strong>Service Retry Logic</strong> – 3 Versuche mit exponentiellem Backoff (500&nbsp;ms → 1&nbsp;s → 2&nbsp;s)</li>
+      <li><strong>Auto Log Rotation</strong> – 10&nbsp;MB Limit, letzte 5 Logs behalten</li>
+      <li><strong>Unterstuetzte Fehlercodes</strong>: <code>0x80070002</code>, <code>0x80240034</code>, <code>0x800F0922</code>, <code>0xC1900200</code> und mehr</li>
+    </ul>
+
+    <h2>Deployment in Intune</h2>
+    <p>
+      Devices → Scripts and remediations → Proactive remediations → + Create<br />
+      Detection: <code>detection.ps1</code> &nbsp;|&nbsp; Remediation: <code>remediation.ps1</code><br />
+      Run as: <strong>System</strong> &nbsp;|&nbsp; 64-bit PowerShell: <strong>Yes</strong> &nbsp;|&nbsp; Schedule: <strong>Daily</strong>
+    </p>
+
+    <h2>Dateien</h2>
+    <ul class="check-list">
+      <li><code>detection.ps1</code> (v2.2) – Diagnose mit BitLocker-Check, DLL-Validierung, Netzwerktests; Exit 0 = OK, Exit 1 = Reparatur nötig</li>
+      <li><code>remediation.ps1</code> (v3.3) – Intelligente Reparatur mit 15 konfigurierbaren Schritten</li>
+      <li><code>Test-WindowsUpdateFix.ps1</code> – Lokales Testskript vor dem Intune-Deployment</li>
+    </ul>
+
+    <h2>Anforderungen</h2>
+    <p>Windows 10/11 · Microsoft Intune · PowerShell 5.1+ · System/Admin-Berechtigungen</p>
+
+    <p>
+      <a class="button" href="https://github.com/roalhelm/WindowsAutopatchFix" rel="noopener" target="_blank">GitHub ansehen</a>
+      <a class="button button-secondary" href="../index.html#projects">Alle Projekte</a>
+    </p>
+  </main>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,81 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Weekend App Experiments | LetMeTryThis.dev</title><link rel="stylesheet" href="../assets/css/styles.css"><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"></head><body><main class="page-shell"><p class="eyebrow">Projekt</p><h1>Weekend App Experiments</h1><p>Platz fuer App-Ideen, TestFlight-Learnings und App-Store-Vorbereitung.</p><p><a class="button button-secondary" href="../index.html#projects">Zurueck zu Projekten</a></p></main></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Intune DeviceOS Report – PowerShell-Tool zur Auswertung von Windows-11-Build-Versionen und Geraetedaten aus Microsoft Intune." />
+  <title>Intune DeviceOS Report | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <nav class="main-nav visible" aria-label="Navigation">
+      <a href="../index.html#projects">Projekte</a>
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#blog">Blog</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <p class="eyebrow">PowerShell · Intune · Graph API</p>
+    <h1>Intune DeviceOS Report</h1>
+    <p>
+      PowerShell-Skript zum Abrufen detaillierter Windows-11-Geräteinformationen aus Microsoft Intune –
+      inklusive OS-Version, Build-Nummer, KB-Update, Hersteller und Smart Recommendations.
+    </p>
+
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v1.2</span>
+      <span class="status-pill" style="background:#f3f4f6;color:#374151;">168 Builds</span>
+      <span class="status-pill" style="background:#dcfce7;color:#166534;">GPL-3.0</span>
+    </div>
+
+    <h2>Was es macht</h2>
+    <p>
+      Das Skript verbindet sich ueber die Microsoft Graph API mit Intune und erstellt
+      einen detaillierten CSV-Report ueber alle verwalteten Geraete – inklusive
+      Feature-Update-Version, Release-Datum, KB-Nummer und automatischen Handlungsempfehlungen.
+    </p>
+
+    <h2>Eingabemethoden</h2>
+    <ul class="check-list">
+      <li><strong>CSV-Datei</strong> – Liste von Computernamen aus <code>Clients.csv</code></li>
+      <li><strong>Manuelle Eingabe</strong> – Einzelne oder mehrere Geraete direkt eingeben</li>
+      <li><strong>Azure AD-Gruppe</strong> – Alle Geraete einer Entra-ID-Gruppe abfragen</li>
+    </ul>
+
+    <h2>Report-Felder</h2>
+    <ul class="check-list">
+      <li>OS-Version, Feature Update (22H2, 23H2, 24H2, 25H2), KB-Nummer, Update-Typ</li>
+      <li>Seriennummer, Hersteller, Modell, Primary User UPN</li>
+      <li>Freier Festplattenspeicher (GB), letzter Intune-Check-in</li>
+      <li>Intune Management Status, Entra ID Status, Tage seit letztem Check-in</li>
+      <li><strong>Recommended Action</strong> – Automatische Empfehlung basierend auf Gerätestatus</li>
+    </ul>
+
+    <h2>Build-Datenbank</h2>
+    <p>
+      Enthalten sind <strong>168 Windows-11-Builds</strong> von 2022 bis 2025:
+      78× 22H2, 60× 23H2, 26× 24H2, 4× 25H2.
+    </p>
+
+    <h2>Benoetigt</h2>
+    <p>
+      PowerShell 7.0+ · Microsoft Graph PowerShell SDK ·
+      Berechtigungen: <code>DeviceManagementManagedDevices.Read.All</code>, <code>Device.Read.All</code>
+    </p>
+
+    <p>
+      <a class="button" href="https://github.com/roalhelm/Intune-DeviceOS-Report" rel="noopener" target="_blank">GitHub ansehen</a>
+      <a class="button button-secondary" href="../index.html#projects">Alle Projekte</a>
+    </p>
+  </main>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
