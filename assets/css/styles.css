@@ -58,6 +58,41 @@ h3 { font-size: 1.28rem; }
 .site-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 2rem clamp(1rem, 4vw, 3rem); color: var(--muted); border-top: 1px solid var(--line); }
 .page-shell { padding: 5rem 0; max-width: 780px; }
 .page-shell h1 { max-width: none; font-size: clamp(2.5rem, 6vw, 4.5rem); }
+.page-shell blockquote {
+  margin: 1.25rem 0;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--accent);
+  background: #eefcf9;
+  border-radius: 0 14px 14px 0;
+  color: #0f3c4a;
+  font-weight: 650;
+}
+.screenshot-gallery {
+  margin: 1.25rem 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.screenshot-gallery figure {
+  margin: 0;
+  padding: .8rem;
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(18, 38, 73, .08);
+}
+.screenshot-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+.screenshot-gallery figcaption {
+  margin-top: .55rem;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
 /* language-switcher */
 .lang-switch { display: inline-flex; align-items: center; gap: .25rem; border: 1px solid var(--line); border-radius: 999px; padding: .3rem .5rem; background: var(--surface); font-weight: 800; font-size: .8rem; cursor: pointer; color: var(--muted); user-select: none; }
 .lang-switch span { padding: .25rem .45rem; border-radius: 999px; transition: background .15s, color .15s; }
@@ -67,6 +102,7 @@ html[lang="de"] [lang="en"] { display: none; }
 html[lang="en"] [lang="de"] { display: none; }
 @media (max-width: 820px) {
   .hero, .split-section, .card-grid, .blog-list { grid-template-columns: 1fr; }
+  .screenshot-gallery { grid-template-columns: 1fr; }
   .main-nav { display: none; position: absolute; top: 72px; right: 1rem; left: 1rem; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 1rem; box-shadow: var(--shadow); }
   .main-nav.open, .main-nav.visible { display: flex; }
   .nav-toggle { display: inline-flex; }
