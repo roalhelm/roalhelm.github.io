@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">LetMeTryThis.dev</title>
+  <desc id="desc">PowerShell, Intune, Endpoint Automation and iOS app development.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eaf2ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="120" r="150" fill="#dbeafe" opacity="0.8"/>
+  <circle cx="170" cy="520" r="190" fill="#dbeafe" opacity="0.65"/>
+  <rect x="90" y="90" width="360" height="360" rx="52" fill="url(#accent)"/>
+  <path d="M175 155h190v30H175zm0 70h190v30H175zm0 70h150v30H175zm0 70h210v30H175zm0 70h120v30H175z" fill="#ffffff" opacity="0.95"/>
+  <text x="90" y="500" fill="#0f172a" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">LetMeTryThis.dev</text>
+  <text x="90" y="560" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="28">PowerShell · Intune · Endpoint Automation · iOS Apps</text>
+</svg>

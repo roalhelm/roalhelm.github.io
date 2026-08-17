@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">LetMeTryThis.dev tech preview</title>
+  <desc id="desc">Technology themed preview card for LetMeTryThis.dev with PowerShell, Intune and iOS development.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#020817"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g opacity="0.2">
+    <path d="M0 100h1200M0 220h1200M0 340h1200M0 460h1200M0 580h1200" stroke="#1e293b"/>
+    <path d="M160 0v630M360 0v630M560 0v630M760 0v630M960 0v630" stroke="#1e293b"/>
+  </g>
+
+  <rect x="80" y="80" width="1040" height="470" rx="30" fill="url(#panel)" stroke="#1e293b"/>
+
+  <rect x="110" y="110" width="200" height="44" rx="12" fill="#0b1220" stroke="#334155"/>
+  <text x="138" y="138" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">&lt;/&gt; dev</text>
+
+  <text x="110" y="245" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="700">LetMeTryThis</text>
+  <text x="112" y="315" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="700">.dev</text>
+
+  <text x="112" y="380" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="26">PowerShell • Intune • Endpoint Automation • iOS Apps</text>
+
+  <g transform="translate(770 155)">
+    <rect width="260" height="240" rx="24" fill="#0b1220" stroke="#1e293b"/>
+    <rect x="26" y="28" width="208" height="16" rx="8" fill="#38bdf8" opacity="0.9"/>
+    <rect x="26" y="62" width="160" height="12" rx="6" fill="#475569"/>
+    <rect x="26" y="92" width="130" height="12" rx="6" fill="#475569"/>
+    <rect x="26" y="140" width="208" height="58" rx="14" fill="url(#accent)"/>
+    <text x="48" y="178" fill="#e0f2fe" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Tech Stack</text>
+    <rect x="26" y="203" width="80" height="18" rx="9" fill="url(#green)"/>
+    <rect x="116" y="203" width="90" height="18" rx="9" fill="#1d4ed8"/>
+  </g>
+
+  <g transform="translate(112 440)">
+    <rect width="160" height="56" rx="18" fill="#111827" stroke="#1e293b"/>
+    <text x="28" y="35" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">PowerShell</text>
+  </g>
+  <g transform="translate(298 440)">
+    <rect width="180" height="56" rx="18" fill="#111827" stroke="#1e293b"/>
+    <text x="28" y="35" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Intune</text>
+  </g>
+  <g transform="translate(504 440)">
+    <rect width="220" height="56" rx="18" fill="#111827" stroke="#1e293b"/>
+    <text x="28" y="35" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Automation</text>
+  </g>
+</svg>
