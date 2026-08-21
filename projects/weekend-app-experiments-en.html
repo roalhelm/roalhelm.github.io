@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Intune DeviceOS Report – PowerShell tool for evaluating Windows 11 build versions and device data from Microsoft Intune." />
+  <title>Intune DeviceOS Report | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <nav class="main-nav visible" aria-label="Navigation">
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#apps">Apps</a>
+      <a href="../index-en.html#blog">Blog</a>
+      <a href="../about-en.html">About</a>
+      <a href="weekend-app-experiments.html">DE</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <p class="eyebrow">PowerShell · Intune · Graph API</p>
+    <h1>Intune DeviceOS Report</h1>
+    <p>
+      PowerShell script for retrieving detailed Windows 11 device information from Microsoft Intune,
+      including OS version, build number, KB updates, manufacturer, and smart recommendations.
+    </p>
+
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v1.2</span>
+      <span class="status-pill" style="background:#f3f4f6;color:#374151;">168 builds</span>
+      <span class="status-pill" style="background:#dcfce7;color:#166534;">GPL-3.0</span>
+    </div>
+
+    <h2>What it does</h2>
+    <p>
+      The script connects to Microsoft Graph via the Intune API and creates a detailed CSV report of all managed devices,
+      including feature update version, release date, KB number, and automatic recommendations.
+    </p>
+
+    <h2>Input methods</h2>
+    <ul class="check-list">
+      <li><strong>CSV file</strong> – list of computer names from <code>Clients.csv</code></li>
+      <li><strong>Manual entry</strong> – enter one or more devices directly</li>
+      <li><strong>Azure AD group</strong> – query all devices in an Entra ID group</li>
+    </ul>
+
+    <h2>Report fields</h2>
+    <ul class="check-list">
+      <li>OS version, feature update (22H2, 23H2, 24H2, 25H2), KB number, update type</li>
+      <li>Serial number, manufacturer, model, primary user UPN</li>
+      <li>Free disk space (GB), last Intune check-in</li>
+      <li>Intune management status, Entra ID status, days since last check-in</li>
+      <li><strong>Recommended action</strong> – automatic recommendation based on device status</li>
+    </ul>
+
+    <h2>Build database</h2>
+    <p>
+      Includes <strong>168 Windows 11 builds</strong> from 2022 to 2025:
+      78× 22H2, 60× 23H2, 26× 24H2, 4× 25H2.
+    </p>
+
+    <h2>Requirements</h2>
+    <p>
+      PowerShell 7.0+ · Microsoft Graph PowerShell SDK ·
+      Permissions: <code>DeviceManagementManagedDevices.Read.All</code>, <code>Device.Read.All</code>
+    </p>
+
+    <p>
+      <a class="button" href="https://github.com/roalhelm/Intune-DeviceOS-Report" rel="noopener" target="_blank">View on GitHub</a>
+      <a class="button button-secondary" href="../index-en.html#projects">All projects</a>
+    </p>
+  </main>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

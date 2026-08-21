@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CheckMicrosoftEndpoints – PowerShell script to verify all Microsoft endpoints needed for Intune, Defender, WUfB, Autopatch, and Entra." />
+  <title>CheckMicrosoftEndpoints | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <nav class="main-nav visible" aria-label="Navigation">
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#apps">Apps</a>
+      <a href="../index-en.html#blog">Blog</a>
+      <a href="../about-en.html">About</a>
+      <a href="local-ai-coding-lab.html">DE</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <p class="eyebrow">PowerShell · Network diagnostics · Intune</p>
+    <h1>CheckMicrosoftEndpoints</h1>
+    <p>
+      Checks all Microsoft endpoints required for Intune, Defender, Windows Update for Business,
+      Windows Autopatch, Entra ID, and Microsoft 365, including an HTML report.
+    </p>
+
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+      <span class="status-pill">⭐ 2 Stars</span>
+      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v2.1</span>
+      <span class="status-pill" style="background:#dcfce7;color:#166534;">GPL-3.0</span>
+    </div>
+
+    <h2>What it does</h2>
+    <p>
+      The script tests TCP connectivity to all relevant Microsoft cloud endpoints,
+      measures latency and download speed, and generates a professional HTML report in the Microsoft design language.
+    </p>
+
+    <h2>Supported services</h2>
+    <ul class="check-list">
+      <li>Windows Update for Business &amp; Windows Autopatch</li>
+      <li>Microsoft Intune (device management)</li>
+      <li>Microsoft Defender (threat protection)</li>
+      <li>Azure Active Directory / Entra ID</li>
+      <li>Microsoft 365, Microsoft Store, Microsoft Edge</li>
+      <li>Windows Activation &amp; Windows Telemetry</li>
+    </ul>
+
+    <h2>HTML report features</h2>
+    <ul class="check-list">
+      <li><strong>Dashboard</strong> – statistics cards, success/failure rate, performance metrics</li>
+      <li><strong>Color-coded status</strong> – OK / FAILED at a glance</li>
+      <li><strong>Latency rating</strong> – Excellent / Good / Needs Improvement</li>
+      <li><strong>Responsive design</strong> – works on desktop, tablet, and mobile</li>
+      <li><strong>Print-optimized</strong> – suitable for PDF export</li>
+    </ul>
+
+    <h2>Quick start</h2>
+    <pre style="background:var(--surface-strong);border:1px solid var(--line);border-radius:12px;padding:1rem;overflow-x:auto;font-size:.875rem;"><code># Test all services with HTML report
+.\CheckMicrosoftEndpointsV2.ps1 -Services All -HtmlReport -OpenReport
+
+# Only Intune and Defender
+.\CheckMicrosoftEndpointsV2.ps1 -Services Intune,Defender -HtmlReport
+
+# Interactive mode
+.\CheckMicrosoftEndpointsV2.ps1</code></pre>
+
+    <h2>Requirements</h2>
+    <p>PowerShell 7+ · Windows 10/11 or Windows Server 2016+ · Administrator rights</p>
+
+    <p>
+      <a class="button" href="https://github.com/roalhelm/CheckMicrosoftEndpoints" rel="noopener" target="_blank">View on GitHub</a>
+      <a class="button button-secondary" href="../index-en.html#projects">All projects</a>
+    </p>
+  </main>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

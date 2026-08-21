@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About v2 | LetMeTryThis.dev</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .about-v2-page {
+      width: min(1100px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 3rem 0 2rem;
+    }
+
+    .about-v2-hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 1.25rem;
+      align-items: end;
+      margin-bottom: 1.5rem;
+      padding: 1.25rem 0 0.25rem;
+    }
+
+    .about-v2-hero h1 {
+      max-width: none;
+      font-size: clamp(2.7rem, 6vw, 5vw);
+      margin: 0;
+    }
+
+    .about-v2-hero .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 56ch;
+    }
+
+    .about-v2-panel {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 1.2rem 1.25rem;
+      box-shadow: 0 18px 36px rgba(37, 99, 235, 0.06);
+    }
+
+    .about-v2-panel p,
+    .about-v2-hero p,
+    .about-v2-quote p {
+      margin: 0.45rem 0;
+      color: var(--muted);
+    }
+
+    .about-v2-panel strong,
+    .about-v2-panel .card-title,
+    .about-v2-quote .card-title {
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .card-title {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 1.04rem;
+    }
+
+    .about-v2-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .about-v2-panel.wide {
+      grid-column: 1 / -1;
+    }
+
+    .about-v2-quote {
+      margin-top: 1rem;
+      max-width: 720px;
+      background: linear-gradient(135deg, rgba(224, 242, 254, 0.85), rgba(255, 255, 255, 0.9));
+    }
+
+    @media (max-width: 820px) {
+      .about-v2-hero,
+      .about-v2-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header compact"><a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Logo" /><span>LetMeTryThis.dev</span></a><nav class="main-nav visible"><a href="index.html#projects">Projekte</a><a href="index.html#apps">Apps</a><a href="index.html#blog">Blog</a><a href="aboutv2-en.html">EN</a></nav></header>
+
+  <main class="about-v2-page">
+    <section class="about-v2-hero">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1>Curiosity-driven development.</h1>
+      </div>
+      <p class="lead">LetMeTryThis.dev ist mein Platz für kleine Software-Projekte, Scripte, App-Ideen, AI-Experimente und Tools rund um Endpoint Management und alle anderen Probleme die man so hat.</p>
+    </section>
+
+    <div class="about-v2-grid">
+      <article class="about-v2-panel">
+        <p><strong>Hi, ich bin Ronny</strong></p>
+        <p>Endpoint Management Enthusiast, PowerShell-Nerd und leidenschaftlicher "Mal schauen, ob das funktioniert"-Mensch.</p>
+        <p>Seit vielen Jahren bewege ich mich im Umfeld von Modern Workplace, Microsoft Intune, SCCM, Windows Client Management und Automatisierung. Beruflich unterstütze ich Kunden dabei, moderne und sichere Client-Management-Lösungen aufzubauen und zu betreiben.</p>
+        <p>Aber die spannendsten Ideen entstehen oft nach Feierabend.</p>
+      </article>
+
+      <article class="about-v2-panel">
+        <span class="card-title">Warum LetMeTryThis.dev?</span>
+        <p>Die meisten meiner Projekte starten mit einem einzigen Gedanken:</p>
+        <p>"Lass mich das mal ausprobieren."</p>
+        <p>Manchmal wird daraus ein kleines PowerShell-Skript.</p>
+        <p>Manchmal eine Automatisierung für Intune.</p>
+        <p>Manchmal eine iPhone App.</p>
+        <p>Und manchmal landet ein komplettes Wochenendprojekt plötzlich produktiv im Einsatz.</p>
+        <p>Diese Webseite ist mein persönlicher Spielplatz für genau solche Ideen.</p>
+      </article>
+
+      <article class="about-v2-panel wide">
+        <span class="card-title">Was du hier findest</span>
+        <p>💻 Endpoint Management</p>
+        <p>Microsoft Intune</p>
+        <p>Windows Client Management</p>
+        <p>SCCM / MECM</p>
+        <p>Autopilot</p>
+        <p>Microsoft Entra</p>
+        <p>PowerShell Automatisierung</p>
+        <p>Security &amp; Compliance</p>
+        <p>🤖 AI &amp; Automation</p>
+        <p>Der Bereich entwickelt sich aktuell wahrscheinlich am schnellsten.</p>
+        <p>Ich experimentiere mit:</p>
+        <p>lokalen LLMs</p>
+        <p>Obsidian Wissensdatenbanken</p>
+        <p>KI-unterstützter Entwicklung</p>
+        <p>Agenten</p>
+        <p>Automatisierungen</p>
+        <p>Vibe Coding</p>
+        <p>Nicht alles wird produktiv verwendet. Aber alles liefert neue Erkenntnisse.</p>
+        <p>📱 App Development</p>
+        <p>2026 habe ich begonnen eigene iPhone Apps zu entwickeln.</p>
+        <p>Der ursprüngliche Gedanke war:</p>
+        <p>"Kann AI wirklich dabei helfen eine App zu entwickeln?"</p>
+        <p>Die Antwort lautet:</p>
+        <p>Ja. Überraschend gut sogar.</p>
+        <p>Seitdem entstehen immer wieder kleine Projekte rund um iOS, Flutter und moderne App-Entwicklung.</p>
+      </article>
+
+      <article class="about-v2-panel">
+        <span class="card-title">🍺 Side Projects</span>
+        <p>Wer mich kennt weiß:</p>
+        <p>Nicht jedes Projekt muss immer hochprofessionell sein.</p>
+        <p>Viele Ideen entstehen aus meinem Beruf, Hobbys, Vereinsleben oder einfach aus dem Wunsch heraus, ein Problem eleganter oder anders zu lösen.</p>
+        <p>Deshalb findest du hier auch Projekte mit einem Augenzwinkern.</p>
+        <p>Manchmal technisch.</p>
+        <p>Manchmal praktisch.</p>
+        <p>Manchmal einfach nur, weil es Spaß gemacht hat.</p>
+      </article>
+
+      <article class="about-v2-panel">
+        <span class="card-title">Aktuelle Interessen</span>
+        <p>Momentan beschäftige ich mich besonders mit:</p>
+        <p>Microsoft Intune</p>
+        <p>Modern Workplace</p>
+        <p>Apple Ökosystem</p>
+        <p>Lokale KI Modelle</p>
+        <p>Obsidian als persönliches Wissenssystem</p>
+        <p>GitHub Pages</p>
+        <p>Automatisierung mit PowerShell</p>
+        <p>Flutter App Entwicklung</p>
+        <p>Home Lab &amp; Cloud Technologien</p>
+      </article>
+
+      <article class="about-v2-panel wide">
+        <span class="card-title">Wenn ich gerade nicht am Rechner sitze</span>
+        <p>Dann findet man mich meistens:</p>
+        <p>bei Vereinsveranstaltungen</p>
+        <p>auf Dorffesten</p>
+        <p>beim Planen neuer Projekte</p>
+        <p>auf Community Events</p>
+        <p>beim Testen neuer Technologien</p>
+        <p>oder beim nächsten "Das probier ich jetzt einfach mal aus."</p>
+      </article>
+
+      <article class="about-v2-panel wide">
+        <span class="card-title">Connect</span>
+        <p>Du hast eine Frage, eine Idee oder willst einfach über Intune, AI oder App-Entwicklung fachsimpeln?</p>
+        <p>📧 support@letmetrythis.dev</p>
+        <p>🌍 <a href="https://letmetrythis.dev" target="_blank">LetMeTryThis.dev</a></p>
+        <p>💻 <a href="https://github.com/roalhelm" target="_blank">GitHub</a></p>
+        <p>🔗 <a href="https://linkedin.com/in/roalhelm" target="_blank">LinkedIn</a></p>
+      </article>
+    </div>
+
+    <article class="about-v2-panel about-v2-quote">
+      <span class="card-title">Mein Lieblingssatz</span>
+      <p>"Es muss nicht perfekt sein. Es muss erstmal funktionieren."</p>
+    </article>
+  </main>
+</body>
+</html>
