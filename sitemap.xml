@@ -61,6 +61,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://letmetrythis.dev/blog/ai-readiness-warum-unternehmen-nicht-mit-dem-tool-beginnen-sollten.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://letmetrythis.dev/blog/workplace-ninjas-summit-2026.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -81,6 +87,12 @@
   <url>
     <loc>https://letmetrythis.dev/blog/workplace-ninjas-summit-2026-en.html</loc>
     <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://letmetrythis.dev/blog/ai-readiness-why-companies-should-not-start-with-the-tool.html</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
