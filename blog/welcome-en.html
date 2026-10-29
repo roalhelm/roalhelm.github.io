@@ -8,13 +8,42 @@
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <main class="page-shell">
-    <p style="text-align:right; margin-bottom:1rem;"><a href="../index-en.html">EN</a> / <a href="welcome.html">DE</a></p>
+  <header class="site-header">
+    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev homepage">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#apps">Apps</a>
+      <a href="../index-en.html#blog">Blog</a>
+      <a href="../about-en.html">About</a>
+      <a href="welcome.html" hreflang="de">DE</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
+<main class="page-shell">
     <p class="eyebrow">Starter</p>
     <h1>Welcome to LetMeTryThis.dev</h1>
     <p>This page is the starting point for small apps, scripts, AI experiments, and technical notes.</p>
     <p>Everything is built statically so the site can be run easily via GitHub Pages.</p>
     <p><a class="button button-secondary" href="../index-en.html">Back to home</a></p>
   </main>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="../impressum-en.html">Imprint</a>
+      •
+      <a href="../datenschutz-en.html">Privacy</a>
+      •
+      <a href="../apps/leckerbierchen-support-en.html">App support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

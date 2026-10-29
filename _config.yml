@@ -1,0 +1,3 @@
+# Dateien, die im Repo bleiben, aber nicht auf GitHub Pages veröffentlicht werden
+exclude:
+  - "blog/Thema AI.md"

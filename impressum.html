@@ -8,25 +8,26 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header compact">
+  <header class="site-header">
     <a class="brand" href="index.html" aria-label="LetMeTryThis.dev Startseite">
       <img src="assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
       <span>LetMeTryThis.dev</span>
     </a>
-    <nav class="main-nav visible" aria-label="Hauptnavigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
       <a href="index.html#projects">Projekte</a>
       <a href="index.html#apps">Apps</a>
       <a href="index.html#blog">Blog</a>
       <a href="about.html">About</a>
-      <a href="impressum-en.html">EN</a>
+      <a href="impressum-en.html" hreflang="en">EN</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
     </nav>
   </header>
-
-  <main class="page-shell">
+<main class="page-shell">
     <p class="eyebrow">Rechtliches</p>
     <h1>Impressum</h1>
 
-    <p>Pflichtangaben gemaess § 5 TMG:</p>
+    <p>Pflichtangaben gemäß § 5 TMG:</p>
     <p>
       Ronny Alhelm<br />
       Dorfstraße 24<br />
@@ -39,7 +40,7 @@
       E-Mail: ronny.alhelm@web.de<br />
     </p>
 
-    <p>Verantwortlich fuer den Inhalt nach § 18 Abs. 2 MStV:</p>
+    <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
     <p>
       Ronny Alhelm<br />
       [Anschrift wie oben]
@@ -49,13 +50,28 @@
 
     <p>
       Weitere Angaben zur Datenverarbeitung findest du in der
-      <a href="datenschutz.html">Datenschutzerklaerung</a>.
+      <a href="datenschutz.html">Datenschutzerklärung</a>.
     </p>
 
     <p>
-      <a class="button button-secondary" href="index.html">Zurueck zur Startseite</a>
-      <a class="button button-secondary" href="datenschutz.html">Datenschutzerklaerung</a>
+      <a class="button button-secondary" href="index.html">Zurück zur Startseite</a>
+      <a class="button button-secondary" href="datenschutz.html">Datenschutzerklärung</a>
     </p>
   </main>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="impressum.html">Impressum</a>
+      •
+      <a href="datenschutz.html">Datenschutz</a>
+      •
+      <a href="apps/leckerbierchen-support.html">App Support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

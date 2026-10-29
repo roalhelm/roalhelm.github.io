@@ -9,20 +9,22 @@
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header compact">
+  <header class="site-header">
     <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev Startseite">
       <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
       <span>LetMeTryThis.dev</span>
     </a>
-    <nav class="main-nav visible" aria-label="Hauptnavigation">
-      <a href="../index.html#apps">Apps</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
       <a href="../index.html#projects">Projekte</a>
+      <a href="../index.html#apps">Apps</a>
       <a href="../index.html#blog">Blog</a>
-      <a href="../impressum.html">Impressum</a>
+      <a href="../about.html">About</a>
+      <a href="leckerbierchen-support-en.html" hreflang="en">EN</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
     </nav>
   </header>
-
-  <main class="page-shell">
+<main class="page-shell">
     <p class="eyebrow">LeckerBierchen</p>
     <h1>Support &amp; Ausblick</h1>
     <p>
@@ -102,8 +104,8 @@
         <figcaption>Startseite mit aktiven Tischen und Schnellkasse.</figcaption>
       </figure>
       <figure>
-        <img src="../assets/img/apps/leckerbierchen/leckerbierchen-schnellkasse.png" alt="Schnell-Kasse mit Kategorien für Getraenke und Essen" loading="lazy" />
-        <figcaption>Schnell-Kasse fuer Laufkundschaft mit klaren Kategorien.</figcaption>
+        <img src="../assets/img/apps/leckerbierchen/leckerbierchen-schnellkasse.png" alt="Schnell-Kasse mit Kategorien für Getränke und Essen" loading="lazy" />
+        <figcaption>Schnell-Kasse für Laufkundschaft mit klaren Kategorien.</figcaption>
       </figure>
       <figure>
         <img src="../assets/img/apps/leckerbierchen/leckerbierchen-abrechnung.png" alt="Abrechnungsansicht mit Positionen und Gesamtbetrag" loading="lazy" />
@@ -131,13 +133,13 @@
       Für allgemeines Feedback, Feature-Wünsche oder Hinweise zur Bedienung ist die Support-Adresse ebenfalls der richtige Weg.
     </p>
     <p>
-      Datenschutz: <a href="../datenschutz.html">Datenschutzerklaerung</a>
+      Datenschutz: <a href="../datenschutz.html">Datenschutzerklärung</a>
     </p>
 
     <h2>Aktuelle Schwerpunkte</h2>
     <ul>
       <li>Optimierte und einfache Abläufe im Tagesgeschäft</li>
-      <li>Verbesserte Offline-Funktionalitaet fuer den mobilen Einsatz</li>
+      <li>Verbesserte Offline-Funktionalität für den mobilen Einsatz</li>
       <li>Stärkere Fokus auf Datenschutz, Stabilität und einfache Administration</li>
     </ul>
 
@@ -156,5 +158,20 @@
       <a class="button button-secondary" href="../datenschutz.html">Datenschutz</a>
     </p>
   </main>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="../impressum.html">Impressum</a>
+      •
+      <a href="../datenschutz.html">Datenschutz</a>
+      •
+      <a href="../apps/leckerbierchen-support.html">App Support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

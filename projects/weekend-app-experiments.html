@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Intune DeviceOS Report – PowerShell-Tool zur Auswertung von Windows-11-Build-Versionen und Geraetedaten aus Microsoft Intune." />
+  <meta name="description" content="Intune DeviceOS Report – PowerShell-Tool zur Auswertung von Windows-11-Build-Versionen und Gerätedaten aus Microsoft Intune." />
   <title>Intune DeviceOS Report | LetMeTryThis.dev</title>
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header compact">
-    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev Startseite">
       <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
       <span>LetMeTryThis.dev</span>
     </a>
-    <nav class="main-nav visible" aria-label="Navigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
       <a href="../index.html#projects">Projekte</a>
       <a href="../index.html#apps">Apps</a>
       <a href="../index.html#blog">Blog</a>
       <a href="../about.html">About</a>
-      <a href="weekend-app-experiments-en.html">EN</a>
+      <a href="weekend-app-experiments-en.html" hreflang="en">EN</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
     </nav>
   </header>
-
-  <main class="page-shell">
+<main class="page-shell">
     <p class="eyebrow">PowerShell · Intune · Graph API</p>
     <h1>Intune DeviceOS Report</h1>
     <p>
@@ -31,24 +32,24 @@
       inklusive OS-Version, Build-Nummer, KB-Update, Hersteller und Smart Recommendations.
     </p>
 
-    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
-      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v1.2</span>
-      <span class="status-pill" style="background:#f3f4f6;color:#374151;">168 Builds</span>
-      <span class="status-pill" style="background:#dcfce7;color:#166534;">GPL-3.0</span>
+    <div class="pill-row">
+      <span class="status-pill pill-blue">v1.2</span>
+      <span class="status-pill pill-gray">168 Builds</span>
+      <span class="status-pill pill-green">GPL-3.0</span>
     </div>
 
     <h2>Was es macht</h2>
     <p>
-      Das Skript verbindet sich ueber die Microsoft Graph API mit Intune und erstellt
-      einen detaillierten CSV-Report ueber alle verwalteten Geraete – inklusive
+      Das Skript verbindet sich über die Microsoft Graph API mit Intune und erstellt
+      einen detaillierten CSV-Report über alle verwalteten Geräte – inklusive
       Feature-Update-Version, Release-Datum, KB-Nummer und automatischen Handlungsempfehlungen.
     </p>
 
     <h2>Eingabemethoden</h2>
     <ul class="check-list">
       <li><strong>CSV-Datei</strong> – Liste von Computernamen aus <code>Clients.csv</code></li>
-      <li><strong>Manuelle Eingabe</strong> – Einzelne oder mehrere Geraete direkt eingeben</li>
-      <li><strong>Azure AD-Gruppe</strong> – Alle Geraete einer Entra-ID-Gruppe abfragen</li>
+      <li><strong>Manuelle Eingabe</strong> – Einzelne oder mehrere Geräte direkt eingeben</li>
+      <li><strong>Azure AD-Gruppe</strong> – Alle Geräte einer Entra-ID-Gruppe abfragen</li>
     </ul>
 
     <h2>Report-Felder</h2>
@@ -66,7 +67,7 @@
       78× 22H2, 60× 23H2, 26× 24H2, 4× 25H2.
     </p>
 
-    <h2>Benoetigt</h2>
+    <h2>Benötigt</h2>
     <p>
       PowerShell 7.0+ · Microsoft Graph PowerShell SDK ·
       Berechtigungen: <code>DeviceManagementManagedDevices.Read.All</code>, <code>Device.Read.All</code>
@@ -78,5 +79,19 @@
     </p>
   </main>
   <script src="../assets/js/main.js"></script>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="../impressum.html">Impressum</a>
+      •
+      <a href="../datenschutz.html">Datenschutz</a>
+      •
+      <a href="../apps/leckerbierchen-support.html">App Support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
 </body>
 </html>

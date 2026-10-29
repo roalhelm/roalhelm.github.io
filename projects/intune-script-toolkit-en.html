@@ -9,21 +9,22 @@
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header compact">
-    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev">
+  <header class="site-header">
+    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev homepage">
       <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
       <span>LetMeTryThis.dev</span>
     </a>
-    <nav class="main-nav visible" aria-label="Navigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
       <a href="../index-en.html#projects">Projects</a>
       <a href="../index-en.html#apps">Apps</a>
       <a href="../index-en.html#blog">Blog</a>
       <a href="../about-en.html">About</a>
-      <a href="intune-script-toolkit.html">DE</a>
+      <a href="intune-script-toolkit.html" hreflang="de">DE</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
     </nav>
   </header>
-
-  <main class="page-shell">
+<main class="page-shell">
     <p class="eyebrow">PowerShell · Intune · Windows Autopatch</p>
     <h1>WindowsAutopatchFix</h1>
     <p>
@@ -31,10 +32,10 @@
       It only performs what is actually broken – no unnecessary system changes.
     </p>
 
-    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+    <div class="pill-row">
       <span class="status-pill">⭐ 8 Stars</span>
-      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v3.3 / v2.2</span>
-      <span class="status-pill" style="background:#fef3c7;color:#92400e;">MIT License</span>
+      <span class="status-pill pill-blue">v3.3 / v2.2</span>
+      <span class="status-pill pill-amber">MIT License</span>
     </div>
 
     <h2>What it does</h2>
@@ -75,5 +76,19 @@
     </p>
   </main>
   <script src="../assets/js/main.js"></script>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="../impressum-en.html">Imprint</a>
+      •
+      <a href="../datenschutz-en.html">Privacy</a>
+      •
+      <a href="../apps/leckerbierchen-support-en.html">App support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
 </body>
 </html>

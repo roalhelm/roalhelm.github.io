@@ -9,48 +9,49 @@
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header compact">
-    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev Startseite">
       <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
       <span>LetMeTryThis.dev</span>
     </a>
-    <nav class="main-nav visible" aria-label="Navigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
       <a href="../index.html#projects">Projekte</a>
       <a href="../index.html#apps">Apps</a>
       <a href="../index.html#blog">Blog</a>
       <a href="../about.html">About</a>
-      <a href="intune-script-toolkit-en.html">EN</a>
+      <a href="intune-script-toolkit-en.html" hreflang="en">EN</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
     </nav>
   </header>
-
-  <main class="page-shell">
+<main class="page-shell">
     <p class="eyebrow">PowerShell · Intune · Windows Autopatch</p>
     <h1>WindowsAutopatchFix</h1>
     <p>
       Intelligente Erkennung und Reparatur von Windows Update-Fehlern als Intune Proactive Remediation.
-      Fuehrt nur aus, was wirklich defekt ist – kein unnötiger Eingriff ins System.
+      Führt nur aus, was wirklich defekt ist – kein unnötiger Eingriff ins System.
     </p>
 
-    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0;">
+    <div class="pill-row">
       <span class="status-pill">⭐ 8 Stars</span>
-      <span class="status-pill" style="background:#dbeafe;color:#1e40af;">v3.3 / v2.2</span>
-      <span class="status-pill" style="background:#fef3c7;color:#92400e;">MIT License</span>
+      <span class="status-pill pill-blue">v3.3 / v2.2</span>
+      <span class="status-pill pill-amber">MIT License</span>
     </div>
 
     <h2>Was es macht</h2>
     <p>
-      Das Skript besteht aus zwei Teilen: <code>detection.ps1</code> prueft, ob Windows Update Probleme vorliegen,
-      und <code>remediation.ps1</code> behebt sie gezielt. 15 unabhaengig konfigurierbare Reparaturschritte
-      werden nur ausgefuehrt, wenn sie benoetigt werden.
+      Das Skript besteht aus zwei Teilen: <code>detection.ps1</code> prüft, ob Windows Update Probleme vorliegen,
+      und <code>remediation.ps1</code> behebt sie gezielt. 15 unabhängig konfigurierbare Reparaturschritte
+      werden nur ausgeführt, wenn sie benötigt werden.
     </p>
 
     <h2>Features</h2>
     <ul class="check-list">
-      <li><strong>Smart Detection</strong> – DLL-Versionspruefung, BitLocker-Status, Service-Abhaengigkeiten, Fehlercode-Dictionary (20+ Codes)</li>
+      <li><strong>Smart Detection</strong> – DLL-Versionsprüfung, BitLocker-Status, Service-Abhängigkeiten, Fehlercode-Dictionary (20+ Codes)</li>
       <li><strong>15 konfigurierbare Reparaturschritte</strong> – Registry-Cleanup, DLL-Reregistrierung, WSUS-Artefakte entfernen, Autopatch-Check u.v.m.</li>
       <li><strong>Service Retry Logic</strong> – 3 Versuche mit exponentiellem Backoff (500&nbsp;ms → 1&nbsp;s → 2&nbsp;s)</li>
       <li><strong>Auto Log Rotation</strong> – 10&nbsp;MB Limit, letzte 5 Logs behalten</li>
-      <li><strong>Unterstuetzte Fehlercodes</strong>: <code>0x80070002</code>, <code>0x80240034</code>, <code>0x800F0922</code>, <code>0xC1900200</code> und mehr</li>
+      <li><strong>Unterstützte Fehlercodes</strong>: <code>0x80070002</code>, <code>0x80240034</code>, <code>0x800F0922</code>, <code>0xC1900200</code> und mehr</li>
     </ul>
 
     <h2>Deployment in Intune</h2>
@@ -76,5 +77,19 @@
     </p>
   </main>
   <script src="../assets/js/main.js"></script>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="../impressum.html">Impressum</a>
+      •
+      <a href="../datenschutz.html">Datenschutz</a>
+      •
+      <a href="../apps/leckerbierchen-support.html">App Support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
 </body>
 </html>

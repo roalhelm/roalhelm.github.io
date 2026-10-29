@@ -8,10 +8,25 @@
 	<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-	<main class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev Startseite">
+      <img src="../assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+      <a href="../index.html#projects">Projekte</a>
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#blog">Blog</a>
+      <a href="../about.html">About</a>
+      <a href="index-en.html" hreflang="en">EN</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
+<main class="page-shell">
 		<p class="eyebrow">Apps</p>
 		<h1>App-Store-Bereich</h1>
-		<p>Dieser Bereich ist fuer App-Store-Produktseiten, Screenshots, Release Notes und Datenschutzlinks vorbereitet.</p>
+		<p>Dieser Bereich ist für App-Store-Produktseiten, Screenshots, Release Notes und Datenschutzlinks vorbereitet.</p>
 		<p>
 			<a class="button button-secondary" href="index-en.html">English version</a>
 		</p>
@@ -33,8 +48,23 @@
 		<p>
 			<a class="button button-secondary" href="../impressum.html">Impressum</a>
 			<a class="button button-secondary" href="../datenschutz.html">Datenschutz</a>
-			<a class="button button-secondary" href="../index.html">Zurueck zur Startseite</a>
+			<a class="button button-secondary" href="../index.html">Zurück zur Startseite</a>
 		</p>
 	</main>
+  <footer class="site-footer">
+    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span>
+      <a href="../impressum.html">Impressum</a>
+      •
+      <a href="../datenschutz.html">Datenschutz</a>
+      •
+      <a href="../apps/leckerbierchen-support.html">App Support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
