@@ -26,13 +26,17 @@
   <meta name="twitter:description" content="IT Specialist from Germany – PowerShell, Intune, Entra ID, endpoint automation and iOS app development." />
   <meta name="twitter:image" content="https://letmetrythis.dev/assets/img/social-preview-tech.png" />
   <title>LetMeTryThis.dev | PowerShell · Intune · Endpoint Automation</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/img/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "LetMeTryThis.dev",
+    "image": "https://letmetrythis.dev/assets/img/logo-512.png",
     "url": "https://letmetrythis.dev/index-en.html",
     "description": "IT Specialist from Germany focused on PowerShell, Intune, Entra ID, endpoint management, automation and iOS app development.",
     "inLanguage": ["en", "de"],
@@ -66,7 +70,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index-en.html" aria-label="LetMeTryThis.dev homepage">
-      <img src="assets/img/logo.svg" alt="LetMeTryThis.dev Logo" />
+      <img src="assets/img/logo-256.webp" alt="LetMeTryThis.dev Logo" width="48" height="48" />
       <span>LetMeTryThis.dev</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
@@ -92,6 +96,10 @@
         </div>
       </div>
       <div class="hero-card" aria-label="Overview">
+        <picture class="hero-logo">
+          <source srcset="assets/img/logo-512.webp" type="image/webp" />
+          <img src="assets/img/logo-512.png" alt="LetMeTryThis.dev – Explore · Automate · Improve" width="512" height="512" />
+        </picture>
         <div class="status-pill">@SPIRIT/21 · Bautzen</div>
         <h2>Ronny Alhelm</h2>
         <p>IT specialist with a focus on Microsoft Endpoint Management, automation, and PowerShell scripting.</p>
@@ -210,7 +218,7 @@
   </main>
 
   <footer class="site-footer">
-    <span>© <span id="year"></span> LetMeTryThis.dev</span>
+    <span class="footer-brand"><img src="assets/img/logo-256.webp" alt="" width="32" height="32" loading="lazy" />© <span id="year"></span> LetMeTryThis.dev</span>
     <span>
       <a href="impressum-en.html">Imprint</a>
       •
