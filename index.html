@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
   <meta name="description" content="Ronny Alhelm – IT Specialist aus Deutschland. PowerShell, Intune, Entra ID, Endpoint Automation und iOS Apps." />
   <meta name="keywords" content="PowerShell, Intune, Entra ID, Endpoint Management, Microsoft Intune, iOS App, GitHub, Automation, IT Specialist, Deutschland" />
   <meta name="author" content="Ronny Alhelm" />
-  <meta name="theme-color" content="#f8fbff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#0b1120" />
   <meta name="robots" content="index,follow" />
   <meta name="language" content="de" />
   <link rel="canonical" href="https://letmetrythis.dev/" />
@@ -88,7 +88,7 @@
     <section class="hero section-shell">
       <div class="hero-copy">
         <p class="eyebrow">PowerShell · Intune · Entra ID · iOS Apps</p>
-        <h1>Weniger Workarounds. Mehr Automation.</h1>
+        <h1>Weniger Workarounds.<br /><span class="hl">Mehr <span class="nowrap">Automation.<span class="cursor" aria-hidden="true"></span></span></span></h1>
         <p class="hero-text">IT Specialist aus Deutschland – ich baue PowerShell-Tools für Intune, SCCM, Endpoint Security und Windows Autopatch, und entwickle iOS-Apps am Feierabend.</p>
         <div class="hero-actions">
           <a class="button" href="#projects">Projekte ansehen</a>
@@ -103,31 +103,34 @@
         <div class="status-pill">@SPIRIT/21 · Bautzen</div>
         <h2>Ronny Alhelm</h2>
         <p>IT Specialist mit Fokus auf Microsoft Endpoint Management, Automatisierung und PowerShell-Scripting.</p>
-        <ul class="check-list">
-          <li>PowerShell &amp; Graph API</li>
-          <li>Microsoft Intune &amp; Entra ID</li>
-          <li>Windows Autopatch &amp; Defender</li>
-          <li>iOS App-Entwicklung</li>
+        <ul class="tag-list" aria-label="Schwerpunkte">
+          <li>PowerShell</li>
+          <li>Graph API</li>
+          <li>Intune</li>
+          <li>Entra ID</li>
+          <li>Autopatch</li>
+          <li>Defender</li>
+          <li>iOS</li>
         </ul>
       </div>
     </section>
 
     <section id="projects" class="section-shell">
       <div class="section-heading">
-        <p class="eyebrow">GitHub Repositories</p>
+        <p class="eyebrow">git clone github.com/roalhelm</p>
         <h2>Öffentliche Projekte</h2>
         <p>PowerShell-Tools und Skripte rund um Microsoft Endpoint Management – alle Open Source auf GitHub.</p>
       </div>
       <div class="card-grid">
         <article class="project-card">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
-          <h3>WindowsAutopatchFix ⭐ 8</h3>
+          <h3>WindowsAutopatchFix <span class="stars" aria-label="8 GitHub-Sterne">★ 8</span></h3>
           <p>PowerShell-Skripte zur Behebung häufiger Windows Autopatch-Probleme und Enrollment-Fehler.</p>
           <a href="projects/intune-script-toolkit.html">Details<span class="sr-only"> zu WindowsAutopatchFix</span></a>
         </article>
         <article class="project-card">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a14.5 14.5 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1"/></svg></div>
-          <h3>CheckMicrosoftEndpoints ⭐ 2</h3>
+          <h3>CheckMicrosoftEndpoints <span class="stars" aria-label="2 GitHub-Sterne">★ 2</span></h3>
           <p>Prüft alle Microsoft-Endpoints für Intune, Defender, WUfB, Autopatch und Entra auf Erreichbarkeit.</p>
           <a href="projects/local-ai-coding-lab.html">Details<span class="sr-only"> zu CheckMicrosoftEndpoints</span></a>
         </article>
@@ -166,26 +169,40 @@
 
     <section id="blog" class="section-shell">
       <div class="section-heading">
-        <p class="eyebrow">Blog</p>
+        <p class="eyebrow">cat ./blog</p>
         <h2>Notizen aus dem Lab</h2>
         <p>Kurze technische Artikel und Learnings aus der Praxis – PowerShell, Intune und was am Feierabend noch so anfällt.</p>
       </div>
+      <div class="blog-featured">
+        <article>
+          <img src="assets/img/social-preview-logo.jpg" alt="" width="1200" height="630" loading="lazy" />
+          <div class="post-body">
+            <p class="meta"><span class="badge-new">NEU</span>App Store · Release</p>
+            <h3><a href="blog/leckerbierchen-eu-app-store-launch.html">LeckerBierchen ist jetzt in der EU im App Store</a></h3>
+            <p>Die DSA-Freigabe ist durch, die App ist in Deutschland und der EU verfügbar – und die ersten Feature Requests sind schon da.</p>
+            <a class="more" href="blog/leckerbierchen-eu-app-store-launch.html" aria-hidden="true" tabindex="-1">lesen</a>
+          </div>
+        </article>
+        <article>
+          <img src="assets/img/social-preview-ai-readiness.png" alt="" width="1200" height="630" loading="lazy" />
+          <div class="post-body">
+            <p class="meta">AI &amp; Automation</p>
+            <h3><a href="blog/ai-readiness-warum-unternehmen-nicht-mit-dem-tool-beginnen-sollten.html">AI Readiness: Warum Unternehmen bei AI nicht mit dem Tool beginnen sollten</a></h3>
+            <p>AI Readiness beginnt nicht mit einer Copilot-Lizenz. Warum Identitäten, Daten, Geräte, Prozesse und Governance die eigentliche Basis sind.</p>
+            <a class="more" href="blog/ai-readiness-warum-unternehmen-nicht-mit-dem-tool-beginnen-sollten.html" aria-hidden="true" tabindex="-1">lesen</a>
+          </div>
+        </article>
+        <article>
+          <img src="assets/img/social-preview-workplace-ninjas-2026.png" alt="" width="1200" height="630" loading="lazy" />
+          <div class="post-body">
+            <p class="meta">AI · Security · Community</p>
+            <h3><a href="blog/workplace-ninjas-summit-2026.html">Workplace Ninjas Summit 2026</a></h3>
+            <p>Vier Tage voller AI, Security und Community: Was ich aus den Diskussionen rund um Agents, Vibecoding und Verantwortung mitnehme.</p>
+            <a class="more" href="blog/workplace-ninjas-summit-2026.html" aria-hidden="true" tabindex="-1">lesen</a>
+          </div>
+        </article>
+      </div>
       <div class="blog-list">
-        <article>
-          <p class="meta">App Store · Release</p>
-          <h3><a href="blog/leckerbierchen-eu-app-store-launch.html">LeckerBierchen ist jetzt in der EU im App Store</a></h3>
-          <p>Die DSA-Freigabe ist durch, die App ist in Deutschland und der EU verfügbar – und die ersten Feature Requests sind schon da.</p>
-        </article>
-        <article>
-          <p class="meta">AI &amp; Automation</p>
-          <h3><a href="blog/ai-readiness-warum-unternehmen-nicht-mit-dem-tool-beginnen-sollten.html">AI Readiness: Warum Unternehmen bei AI nicht mit dem Tool beginnen sollten</a></h3>
-          <p>AI Readiness beginnt nicht mit einer Copilot-Lizenz. Warum Identitäten, Daten, Geräte, Prozesse und Governance die eigentliche Basis sind.</p>
-        </article>
-        <article>
-          <p class="meta">AI · Security · Community</p>
-          <h3><a href="blog/workplace-ninjas-summit-2026.html">Workplace Ninjas Summit 2026</a></h3>
-          <p>Vier Tage voller AI, Security und Community: Was ich aus den Diskussionen rund um Agents, Vibecoding und Verantwortung mitnehme.</p>
-        </article>
         <article>
           <p class="meta">App Store · iOS</p>
           <h3><a href="blog/apple-internal-review.html">Meine iPhone App ist beim internen Review bei Apple gelandet</a></h3>
@@ -213,12 +230,14 @@
       <p class="eyebrow">Open Source</p>
       <h2>Alle Skripte auf GitHub.</h2>
       <p>PowerShell-Tools für Intune, Autopatch, Entra ID und mehr – kostenlos und Open Source. Issues und Feedback willkommen.</p>
-      <a class="button button-secondary" href="https://github.com/roalhelm" rel="noopener" target="_blank">Alle Repos ansehen</a>
+      <code class="cta-code">PS&gt; Install-Script -Name Ideas -Scope Feierabend</code>
+      <p><a class="button" href="https://github.com/roalhelm" rel="noopener" target="_blank">Alle Repos ansehen</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <span class="footer-brand"><img src="assets/img/logo-256.webp" alt="" width="32" height="32" loading="lazy" />© <span id="year"></span> LetMeTryThis.dev</span>
+    <span class="footer-tagline">Explore · Automate · Improve</span>
     <span>
       <a href="impressum.html">Impressum</a>
       •
