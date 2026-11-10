@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Social-Grafik Vorlage</title>
+<!--
+  Vorlage fuer LinkedIn-/Blog-Vorschaubilder, 1200 x 627 px.
+  Texte direkt unten im HTML aendern. Fuer App-Grafiken data-brand="app" auf <html>
+  setzen (Teal-Verlauf), fuer Blog/Tech weglassen (Cyan-Verlauf).
+  Export: Seite im Browser auf 1200x627 oeffnen und Screenshot, oder mit Playwright
+  (siehe STYLEGUIDE.md, Abschnitt Social-Grafiken).
+-->
+<link rel="stylesheet" href="tokens.css">
+<style>
+  html, body { margin: 0; }
+  .canvas {
+    width: 1200px; height: 627px; position: relative; overflow: hidden;
+    font-family: var(--font-sans); color: #fff;
+    background:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 40px 40px,
+      radial-gradient(700px 500px at 100% 0%, var(--glow-a), transparent 70%),
+      radial-gradient(500px 400px at 0% 100%, rgba(245,165,36,.22), transparent 70%),
+      linear-gradient(120deg, var(--navy-900) 0%, var(--navy-850) 45%, var(--glow-b) 100%);
+    padding: 64px; box-sizing: border-box;
+    display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: center;
+  }
+  :root { --glow-a: rgba(34,211,238,.45); --glow-b: #0e4a5c; --hl: var(--cyan-400); }
+  :root[data-brand="app"] { --glow-a: rgba(45,212,191,.55); --glow-b: #0f766e; --hl: var(--teal-300); }
+
+  .brandline { display: flex; align-items: center; gap: 16px; font-size: 26px; font-weight: 700; letter-spacing: -.01em; }
+  .logo { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, var(--hl), #2563eb); box-shadow: 0 0 30px var(--glow-a); }
+  .badge { display: inline-block; margin-top: 30px; padding: 8px 18px; border-radius: 999px; background: var(--amber-400); color: #1a1308; font-weight: 800; font-size: 17px; letter-spacing: .15em; text-transform: uppercase; }
+  h1 { margin: 20px 0 0; font-size: 72px; line-height: 1.02; letter-spacing: -.045em; font-weight: 800; }
+  h1 .hl { color: var(--hl); }
+  .sub { margin: 20px 0 0; font-size: 23px; line-height: 1.45; color: rgba(230,237,247,.82); max-width: 32ch; }
+  .chips { display: flex; gap: 10px; margin-top: 26px; }
+  .chips span { padding: 8px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.06); font-size: 17px; font-weight: 600; }
+  .foot { position: absolute; left: 64px; bottom: 34px; font-size: 18px; color: rgba(230,237,247,.6); }
+  .foot b { color: #fff; }
+
+  .visual { align-self: stretch; display: grid; place-items: center; }
+  .panel { width: 100%; padding: 28px; border-radius: 24px; background: rgba(16,26,44,.75); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 30px 80px rgba(0,0,0,.4); backdrop-filter: blur(10px); }
+  .panel .eyebrow { font-family: var(--font-mono); font-size: 15px; color: var(--hl); margin: 0 0 14px; }
+  .panel .eyebrow::before { content: "> "; color: var(--amber-400); }
+  .panel pre { margin: 0; font-family: var(--font-mono); font-size: 15px; line-height: 1.7; color: #c5f6fd; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div>
+    <div class="brandline"><div class="logo"></div>letmetrythis.dev</div>
+    <span class="badge">Neuer Blogbeitrag</span>
+    <h1>Titel in zwei <span class="hl">Zeilen.</span></h1>
+    <p class="sub">Ein bis zwei Sätze, worum es geht und warum es sich lohnt.</p>
+    <div class="chips"><span>Intune</span><span>PowerShell</span><span>Praxis</span></div>
+  </div>
+  <div class="visual">
+    <div class="panel">
+      <p class="eyebrow">beispiel</p>
+      <pre>Rechts Platz fuer
+Code, Screenshot,
+App-Mockup oder Logo.</pre>
+    </div>
+  </div>
+  <div class="foot">Mehr im Blog: <b>letmetrythis.dev</b></div>
+</div>
+</body>
+</html>

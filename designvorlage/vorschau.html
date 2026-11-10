@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>letmetrythis Designvorlage</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-3); }
+  .swatch { border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); }
+  .swatch div { height: 64px; }
+  .swatch p { margin: 0; padding: var(--space-2) var(--space-3); font-family: var(--font-mono); font-size: var(--fs-xs); }
+  .swatch span { display: block; color: var(--muted); }
+  .toolbar { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+  .demo-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+  .space-bar { height: 14px; background: var(--primary); border-radius: 3px; }
+  .space-row { display: grid; grid-template-columns: 90px 1fr; align-items: center; gap: var(--space-3); font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: var(--space-7) 0; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#"><span>letmetrythis<span class="hl">.dev</span></span></a>
+  <nav class="nav"><a href="#farben">Farben</a><a href="#typo">Typo</a><a href="#komponenten">Komponenten</a></nav>
+  <div class="toolbar">
+    <button class="btn btn-secondary btn-sm" id="theme">Hell/Dunkel</button>
+    <button class="btn btn-secondary btn-sm" id="brand">Blog/App</button>
+  </div>
+</header>
+
+<main class="container section">
+  <p class="eyebrow">designvorlage v1.0</p>
+  <h1>Ein Look für alle Projekte<span class="cursor"></span></h1>
+  <p class="lead">Farben, Schrift, Abstände und Bausteine für Blog, Apps, Projektseiten und LinkedIn-Grafiken. Oben rechts lassen sich Hell/Dunkel und der Akzent für Apps umschalten.</p>
+  <div class="btn-row" style="margin-top:var(--space-5)">
+    <a class="btn" href="#komponenten">Primär-Button</a>
+    <a class="btn btn-secondary" href="#farben">Sekundär</a>
+    <a class="btn btn-accent" href="#">Akzent</a>
+  </div>
+
+  <hr>
+  <section id="farben" class="stack">
+    <p class="eyebrow">farben</p>
+    <h2>Palette</h2>
+    <p class="muted">Nachtblau als Grund, Cyan für Tech und Blog, Teal für Apps, Bernstein als Akzent.</p>
+    <div class="swatches">
+      <div class="swatch"><div style="background:#0b1120"></div><p>Nachtblau<span>#0B1120</span></p></div>
+      <div class="swatch"><div style="background:#101a2c"></div><p>Fläche<span>#101A2C</span></p></div>
+      <div class="swatch"><div style="background:#1e2d47"></div><p>Linie<span>#1E2D47</span></p></div>
+      <div class="swatch"><div style="background:#22d3ee"></div><p>Cyan (Blog)<span>#22D3EE</span></p></div>
+      <div class="swatch"><div style="background:#0e7490"></div><p>Cyan hell<span>#0E7490</span></p></div>
+      <div class="swatch"><div style="background:#5eead4"></div><p>Teal (App)<span>#5EEAD4</span></p></div>
+      <div class="swatch"><div style="background:#0f766e"></div><p>Teal hell<span>#0F766E</span></p></div>
+      <div class="swatch"><div style="background:#f5a524"></div><p>Bernstein<span>#F5A524</span></p></div>
+      <div class="swatch"><div style="background:#e6edf7"></div><p>Text<span>#E6EDF7</span></p></div>
+      <div class="swatch"><div style="background:#94a3b8"></div><p>Gedämpft<span>#94A3B8</span></p></div>
+    </div>
+  </section>
+
+  <hr>
+  <section id="typo" class="stack">
+    <p class="eyebrow">typografie</p>
+    <h2>Inter und JetBrains Mono</h2>
+    <h3>H3 Zwischenüberschrift, Inter 800</h3>
+    <p class="lead">Lead-Text in Inter, gedämpft, maximal 58 Zeichen breit.</p>
+    <p>Fließtext in Inter 400 mit Zeilenhöhe 1,6. Code wie <span class="code-inline">Get-MgDevice</span> und Metadaten in JetBrains Mono.</p>
+    <p class="meta">10. November 2026 · 4 Min. Lesezeit</p>
+    <p class="label-caps">Versalien-Label</p>
+    <div class="stack" style="max-width:420px">
+      <div class="space-row">space-2 8px<div class="space-bar" style="width:8px"></div></div>
+      <div class="space-row">space-4 16px<div class="space-bar" style="width:16px"></div></div>
+      <div class="space-row">space-5 24px<div class="space-bar" style="width:24px"></div></div>
+      <div class="space-row">space-6 32px<div class="space-bar" style="width:32px"></div></div>
+      <div class="space-row">space-7 48px<div class="space-bar" style="width:48px"></div></div>
+      <div class="space-row">space-8 64px<div class="space-bar" style="width:64px"></div></div>
+    </div>
+  </section>
+
+  <hr>
+  <section id="komponenten" class="stack">
+    <p class="eyebrow">komponenten</p>
+    <h2>Bausteine</h2>
+    <div class="demo-row">
+      <span class="pill">status: live</span>
+      <span class="pill pill-primary">neu</span>
+      <span class="pill pill-solid">Jetzt verfügbar</span>
+      <span class="chip">Kein Account</span>
+      <span class="tag">intune</span><span class="tag">powershell</span>
+    </div>
+    <div class="grid-3">
+      <article class="card card-link">
+        <div class="card-icon">01</div>
+        <h3>Projektkarte</h3>
+        <p>Karte mit Hover-Glow für Projekte und Blogbeiträge.</p>
+        <a class="card-more" href="#">Mehr lesen</a>
+      </article>
+      <article class="card card-featured">
+        <span class="pill">featured</span>
+        <h3>Hervorgehoben</h3>
+        <p>Verlaufsrand von Primärfarbe zu Bernstein für das wichtigste Element.</p>
+      </article>
+      <article class="card">
+        <h3>Formular</h3>
+        <label class="meta" for="demo-email">E-Mail-Adresse</label>
+        <input class="input" id="demo-email" type="email" autocomplete="email" placeholder="name@beispiel.de">
+        <button class="btn btn-sm">Absenden</button>
+      </article>
+    </div>
+    <blockquote>Zitat oder Kernaussage mit Akzentlinie.</blockquote>
+    <div class="callout callout-warn"><strong>Hinweis:</strong> Callout für Warnungen und Tipps.</div>
+    <pre><code>Connect-MgGraph -Scopes "Device.Read.All"</code></pre>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>letmetrythis.dev</span>
+  <span class="footer-tagline">let me try this</span>
+</footer>
+
+<script>
+  const r = document.documentElement;
+  document.getElementById('theme').onclick = () => r.dataset.theme = r.dataset.theme === 'light' ? 'dark' : 'light';
+  document.getElementById('brand').onclick = () => r.dataset.brand = r.dataset.brand === 'app' ? '' : 'app';
+</script>
+</body>
+</html>
