@@ -34,12 +34,14 @@ Eine gemeinsame Vorlage für alles, was unter letmetrythis.dev läuft: Blog, Pro
 | Primär Blog (Cyan) | `#22D3EE` | `#0E7490` | `--primary` |
 | Primär App (Teal) | `#5EEAD4` | `#0F766E` | `--primary` mit `data-brand="app"` |
 | Akzent (Bernstein) | `#F5A524` | `#B45309` | `--accent` |
+| Bernstein als Text | `#F5A524` | `#92400E` | `--accent-text` |
 | Fehler | `#F87171` | `#B42318` | `--danger` |
 | Erfolg | `#4ADE80` | `#15803D` | `--success` |
 
 Regeln:
 - In Komponenten immer die semantischen Tokens (`--primary`, `--text` ...) verwenden, nie Hex-Werte. Dann funktionieren Hell/Dunkel und Blog/App automatisch.
 - Text auf Primärfarbe ist `--on-primary`, Text auf Bernstein ist `--on-accent`.
+- Bernstein-Text auf zartem Bernstein-Grund (Pills) ist `--accent-text`, im Hellmodus dunkler für ausreichenden Kontrast.
 - Für zarte Hintergründe gibt es `--primary-soft` und `--accent-soft` (ca. 12 % Deckkraft).
 
 ## Typografie

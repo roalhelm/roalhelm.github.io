@@ -26,7 +26,8 @@ class BrandColors {
   static const amber = Color(0xFFF59E0B);
   static const onAmber = Color(0xFF1A1308);
 
-  static const danger = Color(0xFFB42318);
+  static const danger = Color(0xFFB42318);     // Fehler auf hellem Grund
+  static const dangerDark = Color(0xFFF87171); // Fehler auf dunklem Grund
   static const success = Color(0xFF15803D);
 }
 
@@ -79,7 +80,7 @@ class BrandTheme {
       onTertiary: BrandColors.onAmber,
       surface: surface,
       onSurface: onSurface,
-      error: BrandColors.danger,
+      error: brightness == Brightness.dark ? BrandColors.dangerDark : BrandColors.danger,
       outline: line,
     );
     return ThemeData(

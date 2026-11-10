@@ -5,7 +5,7 @@
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; } /* Platz fuer den Sticky-Header */
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -76,7 +76,7 @@ h3 { font-size: var(--fs-h3); letter-spacing: var(--ls-tight); }
 .card-featured::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: linear-gradient(160deg, var(--primary), transparent 40%, transparent 70%, var(--accent)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .7; pointer-events: none; }
 
 /* ---------- Pills, Badges, Tags ---------- */
-.pill { display: inline-flex; align-items: center; padding: .3rem .75rem; border-radius: var(--radius-pill); font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: var(--fw-medium); background: var(--accent-soft); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.pill { display: inline-flex; align-items: center; padding: .3rem .75rem; border-radius: var(--radius-pill); font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: var(--fw-medium); background: var(--accent-soft); color: var(--accent-text); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
 .pill-primary { background: var(--primary-soft); color: var(--primary); border-color: color-mix(in srgb, var(--primary) 35%, transparent); }
 .pill-solid { background: var(--accent); color: var(--on-accent); border-color: transparent; font-family: var(--font-sans); font-weight: var(--fw-black); letter-spacing: var(--ls-caps); text-transform: uppercase; }
 .chip { display: inline-flex; padding: .45rem .9rem; border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--surface-strong); color: var(--text); font-weight: var(--fw-semibold); font-size: var(--fs-sm); }
@@ -109,6 +109,7 @@ pre { padding: var(--space-4); border-radius: var(--radius-md); background: var(
 }
 
 @media (max-width: 720px) {
+  html { scroll-padding-top: 10rem; } /* Header bricht mobil in mehrere Zeilen um */
   .site-header { flex-wrap: wrap; }
-  .nav { display: none; }
+  .nav { order: 3; width: 100%; flex-wrap: wrap; gap: .25rem 1rem; }
 }

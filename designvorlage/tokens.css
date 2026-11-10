@@ -70,6 +70,7 @@
   --accent: var(--amber-400);          /* Bernstein: Badges, Status, "> " */
   --on-accent: #1a1308;
   --accent-soft: rgba(245, 165, 36, .14);
+  --accent-text: var(--amber-400);     /* Bernstein als Textfarbe auf --accent-soft */
 
   --danger: var(--red-400);
   --success: var(--green-400);
@@ -155,6 +156,7 @@
   --accent: var(--amber-700);
   --on-accent: #ffffff;
   --accent-soft: rgba(180, 83, 9, .1);
+  --accent-text: #92400e;              /* dunkler, damit kleiner Text 4.5:1 erreicht */
 
   --danger: var(--red-700);
   --success: var(--green-700);
