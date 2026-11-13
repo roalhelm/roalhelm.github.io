@@ -19,8 +19,8 @@
   <meta property="og:site_name" content="LetMeTryThis.dev" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:image" content="https://letmetrythis.dev/assets/img/social-preview-microsoft-status.png" />
-  <meta property="og:image:width" content="2400" />
-  <meta property="og:image:height" content="1254" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
   <meta property="og:image:alt" content="Microsoft-Störung auf einen Blick - LetMeTryThis.dev" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Microsoft-Störung auf einen Blick" />
@@ -86,7 +86,7 @@
     <p>Microsoft 365 hatte heute eine größere Störung. Und genau dafür ist die neue Statusbox gedacht.</p>
 
     <figure class="post-figure">
-      <img src="../assets/img/microsoft-status-endpoint-check-screenshot.png" alt="Microsoft Endpoint Check mit der Box für aktive Microsoft Service Incidents, darunter Microsoft 365 mit Service degradation" width="1280" height="900" loading="lazy" />
+      <a href="../assets/img/microsoft-status-endpoint-check-screenshot.webp" target="_blank" rel="noopener"><img src="../assets/img/microsoft-status-endpoint-check-screenshot.webp" alt="Microsoft Endpoint Check mit der Box für aktive Microsoft Service Incidents, darunter Microsoft 365 mit Service degradation" width="1280" height="900" loading="lazy" /></a>
       <figcaption>Der Endpoint Check heute Vormittag: Die Statusbox listet die zu dem Zeitpunkt gemeldeten Incidents, darunter Microsoft 365 und Microsoft Copilot.</figcaption>
     </figure>
 
@@ -118,7 +118,7 @@
     <p>Aktuell sind das 10 Dienste mit 288 Endpunkten, von Intune über Windows Update, Autopatch und Defender bis zu Microsoft 365, Edge und Windows Telemetry.</p>
 
     <figure class="post-figure">
-      <img src="../assets/img/microsoft-endpoint-check-how-it-works.png" alt="Funktionsweise: Endpunktlisten von Microsoft Learn, Erreichbarkeitstest im Browser mit HEAD- und GET-Anfrage, Ergebnis mit reachable, timeout und unreachable sowie 10 Dienste mit Beispiel-Hosts" width="2400" height="1568" loading="lazy" />
+      <a href="../assets/img/microsoft-endpoint-check-how-it-works.webp" target="_blank" rel="noopener"><img src="../assets/img/microsoft-endpoint-check-how-it-works.webp" alt="Funktionsweise: Endpunktlisten von Microsoft Learn, Erreichbarkeitstest im Browser mit HEAD- und GET-Anfrage, Ergebnis mit reachable, timeout und unreachable sowie 10 Dienste mit Beispiel-Hosts" width="1600" height="1045" loading="lazy" /></a>
       <figcaption>Von Microsoft Learn bis in den Browser: woher die URLs kommen, wie getestet wird und welche Dienste dabei sind.</figcaption>
     </figure>
 
@@ -138,7 +138,7 @@
     <p>Eigentlich wollte ich den Status direkt im Browser abrufen. Das blockiert der Browser aber per CORS, weil status.cloud.microsoft keine Abrufe von fremden Seiten erlaubt. Bei einer statischen GitHub-Pages-Seite ohne eigenes Backend braucht es also einen Umweg.</p>
 
     <figure class="post-figure">
-      <img src="../assets/img/microsoft-status-flow.png" alt="Ablauf: status.cloud.microsoft, GitHub Action alle 15 Minuten, Statusdatei ms-status.generated.json, Endpoint Check" width="2400" height="880" loading="lazy" />
+      <a href="../assets/img/microsoft-status-flow.webp" target="_blank" rel="noopener"><img src="../assets/img/microsoft-status-flow.webp" alt="Ablauf: status.cloud.microsoft, GitHub Action alle 15 Minuten, Statusdatei ms-status.generated.json, Endpoint Check" width="1600" height="587" loading="lazy" /></a>
       <figcaption>Der Weg der Daten: Eine GitHub Action holt den Status ab, schreibt eine JSON-Datei, und die Seite liest diese Datei.</figcaption>
     </figure>
 

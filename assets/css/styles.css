@@ -307,7 +307,8 @@ h3 { font-size: 1.24rem; letter-spacing: -0.025em; }
   .post-thumb { max-width: 180px; border-radius: 10px; }
 }
 /* article figures */
-.post-figure { margin: 2rem 0; padding: .8rem; background: var(--card-bg); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-soft); }
+.post-figure { max-width: 600px; margin: 2rem auto; padding: .6rem; background: var(--card-bg); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-soft); }
 .post-figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.post-figure a { display: block; cursor: zoom-in; }
 .post-figure figcaption { margin-top: .6rem; font-size: .9rem; line-height: 1.4; color: var(--muted); }
 .post-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.5rem; }
