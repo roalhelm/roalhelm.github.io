@@ -111,6 +111,19 @@
 
     <p>Deshalb steht diese Information jetzt direkt über dem Erreichbarkeitstest.</p>
 
+    <h2>So funktioniert der Endpoint Check</h2>
+
+    <p>Kurz zur Erinnerung, was die Seite eigentlich macht. Die Liste der Endpunkte stammt aus den offiziellen Microsoft-Learn-Seiten der jeweiligen Dienste, zum Beispiel <a href="https://learn.microsoft.com/en-us/intune/fundamentals/endpoints" rel="noopener" target="_blank">Intune</a> oder <a href="https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges" rel="noopener" target="_blank">Microsoft 365</a>. Eine GitHub Action liest diese Seiten jeden Sonntag aus und schreibt das Ergebnis nach <code>web/data/endpoints.generated.json</code>. Die Seite versucht zusätzlich, die Listen live zu aktualisieren, und fällt sonst auf diese Datei zurück.</p>
+
+    <p>Aktuell sind das 10 Dienste mit 288 Endpunkten, von Intune über Windows Update, Autopatch und Defender bis zu Microsoft 365, Edge und Windows Telemetry.</p>
+
+    <figure class="post-figure">
+      <img src="../assets/img/microsoft-endpoint-check-how-it-works.png" alt="Funktionsweise: Endpunktlisten von Microsoft Learn, Erreichbarkeitstest im Browser mit HEAD- und GET-Anfrage, Ergebnis mit reachable, timeout und unreachable sowie 10 Dienste mit Beispiel-Hosts" width="2400" height="1568" loading="lazy" />
+      <figcaption>Von Microsoft Learn bis in den Browser: woher die URLs kommen, wie getestet wird und welche Dienste dabei sind.</figcaption>
+    </figure>
+
+    <p>Getestet wird direkt aus dem Browser des Clients. Damit prüft die Seite genau das Netzwerk, den Proxy und die Firewall, hinter denen das Gerät tatsächlich hängt. Pro Endpunkt schickt sie zuerst eine HEAD-Anfrage und, wenn der Browser die blockiert, eine GET-Anfrage im no-cors-Modus. Nach 8 Sekunden gilt der Endpunkt als Timeout. Jede Antwort zählt als erreichbar, auch ein 403 oder 500, denn es geht um die Verbindung und nicht um den Inhalt. Am Ende stehen die Ergebnisse gruppiert pro Dienst, mit Proxy-Hinweisen und Export als JSON oder CSV.</p>
+
     <h2>Was neu ist</h2>
 
     <ul>
@@ -133,7 +146,7 @@
 
     <ol>
       <li>Alle 15 Minuten ruft sie die vier öffentlichen Quellen ab.</li>
-      <li>Das Ergebnis landet in der Datei <code>web/data/ms-status.generated.json</code>. Committet wird nur, wenn sich etwas geändert hat.</li>
+      <li>Das Ergebnis landet in der Datei <code>web/data/ms-status.generated.json</code>. Committet wird nur, wenn sich die Incidents ändern oder der letzte Stand älter als 6 Stunden ist.</li>
       <li>Danach baut GitHub Pages die Seite neu, und der Endpoint Check zeigt den neuen Stand.</li>
     </ol>
 

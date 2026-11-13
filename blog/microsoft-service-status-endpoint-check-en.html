@@ -111,6 +111,19 @@
 
     <p>So this information now sits right above the reachability check.</p>
 
+    <h2>How the Endpoint Check works</h2>
+
+    <p>A quick reminder of what the page actually does. The endpoint list comes from the official Microsoft Learn pages of each service, for example <a href="https://learn.microsoft.com/en-us/intune/fundamentals/endpoints" rel="noopener" target="_blank">Intune</a> or <a href="https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges" rel="noopener" target="_blank">Microsoft 365</a>. A GitHub Action parses these pages every Sunday and writes the result to <code>web/data/endpoints.generated.json</code>. The page also tries to refresh the lists live and falls back to that file otherwise.</p>
+
+    <p>Right now that is 10 services with 288 endpoints, from Intune, Windows Update, Autopatch and Defender to Microsoft 365, Edge and Windows Telemetry.</p>
+
+    <figure class="post-figure">
+      <img src="../assets/img/microsoft-endpoint-check-how-it-works.png" alt="How it works: endpoint lists from Microsoft Learn, reachability check in the browser with HEAD and GET requests, result with reachable, timeout and unreachable, and 10 services with example hosts" width="2400" height="1568" loading="lazy" />
+      <figcaption>From Microsoft Learn to your browser: where the URLs come from, how they are tested and which services are included.</figcaption>
+    </figure>
+
+    <p>The test runs directly in the client's browser. That way the page checks exactly the network, proxy and firewall the device really sits behind. For each endpoint it first sends a HEAD request and, if the browser blocks that, a GET request in no-cors mode. After 8 seconds the endpoint counts as a timeout. Any response counts as reachable, even a 403 or 500, because this is about the connection, not the content. The results end up grouped per service, with proxy hints and export as JSON or CSV.</p>
+
     <h2>What is new</h2>
 
     <ul>
@@ -133,7 +146,7 @@
 
     <ol>
       <li>Every 15 minutes it fetches the four public sources.</li>
-      <li>The result goes into <code>web/data/ms-status.generated.json</code>. It only commits when something changed.</li>
+      <li>The result goes into <code>web/data/ms-status.generated.json</code>. It only commits when the incidents change or the last check is older than 6 hours.</li>
       <li>GitHub Pages then redeploys the site, and the Endpoint Check shows the new state.</li>
     </ol>
 
