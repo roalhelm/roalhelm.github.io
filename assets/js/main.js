@@ -11,6 +11,19 @@ if (toggle && nav) {
   }));
 }
 
+// Tools dropdown: close it on a click outside or on Escape.
+document.querySelectorAll('.nav-tools').forEach(function (menu) {
+  document.addEventListener('click', function (event) {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+  menu.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  });
+});
+
 // Theme: Dark ist Standard, Light wird nur nach expliziter Wahl gespeichert.
 const root = document.documentElement;
 const header = document.querySelector('.site-header');
