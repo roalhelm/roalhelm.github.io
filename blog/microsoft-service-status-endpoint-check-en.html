@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
+  <meta name="description" content="On 13 November Microsoft 365 had a major service incident. The same day my update to the Microsoft Endpoint Check went live: the page now shows current incidents from status.cloud.microsoft." />
+  <meta name="keywords" content="Microsoft 365, outage, status.cloud.microsoft, Exchange Online, Endpoint Check, GitHub Actions, Intune, LetMeTryThis.dev" />
+  <meta name="author" content="Ronny Alhelm" />
+  <meta name="robots" content="index,follow" />
+  <meta name="language" content="en" />
+  <link rel="alternate" hreflang="de" href="https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check.html" />
+  <link rel="alternate" hreflang="en" href="https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check-en.html" />
+  <link rel="canonical" href="https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check-en.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Microsoft outage at a glance" />
+  <meta property="og:description" content="On 13 November Microsoft 365 had a major service incident. The same day my update to the Microsoft Endpoint Check went live: the page now shows current incidents from status.cloud.microsoft." />
+  <meta property="og:url" content="https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check-en.html" />
+  <meta property="og:site_name" content="LetMeTryThis.dev" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://letmetrythis.dev/assets/img/social-preview-microsoft-status-en.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1254" />
+  <meta property="og:image:alt" content="Microsoft outage at a glance - LetMeTryThis.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Microsoft outage at a glance" />
+  <meta name="twitter:description" content="On 13 November Microsoft 365 had a major service incident. The same day my update to the Microsoft Endpoint Check went live: the page now shows current incidents from status.cloud.microsoft." />
+  <meta name="twitter:image:alt" content="Microsoft outage at a glance - LetMeTryThis.dev" />
+  <meta name="twitter:image" content="https://letmetrythis.dev/assets/img/social-preview-microsoft-status-en.png" />
+  <title>Microsoft outage at a glance | LetMeTryThis.dev</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" href="../assets/img/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="../assets/img/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Microsoft outage at a glance",
+    "description": "On 13 November Microsoft 365 had a major service incident. The same day my update to the Microsoft Endpoint Check went live: the page now shows current incidents from status.cloud.microsoft.",
+    "author": {
+      "@type": "Person",
+      "name": "Ronny Alhelm"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LetMeTryThis.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://letmetrythis.dev/assets/img/logo-512.png"
+      }
+    },
+    "datePublished": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check-en.html"
+    },
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev homepage">
+      <img src="../assets/img/logo-256.webp" alt="LetMeTryThis.dev Logo" width="48" height="48" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#apps">Apps</a>
+      <a href="../index-en.html#blog">Blog</a>
+      <a href="../about-en.html">About</a>
+      <a href="microsoft-service-status-endpoint-check.html" hreflang="de">DE</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
+<main class="page-shell">
+    <p class="eyebrow">Microsoft 365 · GitHub Actions · 13 November 2026</p>
+    <h1>Microsoft outage at a glance</h1>
+
+    <p>Sometimes the timing just works out. This morning I shipped an update to my <a href="https://letmetrythis.dev/CheckMicrosoftEndpoints/">Microsoft Endpoint Check</a>: the page now shows current incidents from <a href="https://status.cloud.microsoft" rel="noopener" target="_blank">status.cloud.microsoft</a>. And right after it went live, there was already something to show.</p>
+
+    <p>Microsoft 365 had a major service incident today. That is exactly what the new status box is for.</p>
+
+    <figure class="post-figure">
+      <img src="../assets/img/microsoft-status-endpoint-check-screenshot.png" alt="Microsoft Endpoint Check with the box for active Microsoft service incidents, including Microsoft 365 with service degradation" width="1280" height="900" loading="lazy" />
+      <figcaption>The Endpoint Check this morning: the status box lists the incidents reported at that time, including Microsoft 365 and Microsoft Copilot.</figcaption>
+    </figure>
+
+    <h2>What happened at Microsoft today</h2>
+
+    <p>According to the status file my repository fetched from status.cloud.microsoft at 11:24 CET (10:24 UTC), two incidents were open at that time, both marked <strong>Service degradation</strong>:</p>
+
+    <ul>
+      <li><strong>Microsoft 365 (enterprise):</strong> "Users may be unable to connect to multiple Microsoft 365 services". Microsoft said that features interacting with Exchange Online and email services were impacted, while parts of the services that do not depend on Exchange Online remained functional.</li>
+      <li><strong>Microsoft 365 (consumer):</strong> "Users may be unable to access or perform several actions in Microsoft 365 services". Listed were Outlook.com, OneDrive, OneNote, Microsoft To Do, Teams and Microsoft 365 for the web.</li>
+    </ul>
+
+    <p>At that point Microsoft had not published a root cause. The consumer incident only said they were pursuing multiple workstreams to pinpoint the source and recover the affected environment. I am deliberately not speculating beyond that. For the current state, go straight to <a href="https://status.cloud.microsoft" rel="noopener" target="_blank">status.cloud.microsoft</a>, and for your own tenant the Service Health page in the Microsoft 365 admin center is the more reliable source.</p>
+
+    <h2>Why this belongs in the Endpoint Check</h2>
+
+    <p>Anyone working in endpoint management knows the situation: Outlook does not connect, Teams hangs, a device does not sync with Intune. The first question is almost always the same:</p>
+
+    <p><strong>Is it the client, the network, or Microsoft?</strong></p>
+
+    <p>The Endpoint Check already answered the first part. It checks from your browser which Microsoft endpoints for Intune, Windows Update, Autopatch and Defender are reachable. What was missing was the view from the other side. If Microsoft is reporting an incident right now, you can skip a lot of troubleshooting on the client.</p>
+
+    <p>So this information now sits right above the reachability check.</p>
+
+    <h2>What is new</h2>
+
+    <ul>
+      <li><strong>Status box for Microsoft incidents:</strong> when there are active incidents, the page shows a compact box with service, status, title and a link to status.cloud.microsoft. When all is fine, only one small line remains.</li>
+      <li><strong>Four sources, no sign-in:</strong> the data comes from the public JSON behind status.cloud.microsoft for Microsoft 365, Azure, Power Platform and Microsoft 365 consumer. No tenant and no sign-in needed.</li>
+      <li><strong>New design:</strong> the page now uses the same design as this blog.</li>
+      <li><strong>Link preview:</strong> sharing the link on LinkedIn or in Teams now shows a proper preview with an image.</li>
+    </ul>
+
+    <h2>How the data gets to the page</h2>
+
+    <p>My first idea was to fetch the status directly in the browser. The browser blocks that because of CORS: status.cloud.microsoft does not allow requests from other sites. A static GitHub Pages site without its own backend needs a detour.</p>
+
+    <figure class="post-figure">
+      <img src="../assets/img/microsoft-status-flow.png" alt="Flow: status.cloud.microsoft, GitHub Action every 15 minutes, status file ms-status.generated.json, Endpoint Check" width="2400" height="880" loading="lazy" />
+      <figcaption>The data path: a GitHub Action fetches the status, writes a JSON file, and the page reads that file.</figcaption>
+    </figure>
+
+    <p>The detour is a GitHub Action called "Update Microsoft service status":</p>
+
+    <ol>
+      <li>Every 15 minutes it fetches the four public sources.</li>
+      <li>The result goes into <code>web/data/ms-status.generated.json</code>. It only commits when something changed.</li>
+      <li>GitHub Pages then redeploys the site, and the Endpoint Check shows the new state.</li>
+    </ol>
+
+    <p>One detail mattered most to me: <strong>the page ignores data older than 12 hours.</strong> If the Action ever stops running, the page should not cheerfully report "all fine" while Microsoft is having problems. No statement is better than a wrong one.</p>
+
+    <h2>What the box is not</h2>
+
+    <p>The status box does not replace Service Health in the Microsoft 365 admin center. It only shows what Microsoft reports publicly and knows nothing about your tenant. Because of the 15-minute interval and the redeploy, it can also lag a few minutes behind.</p>
+
+    <p>For the quick question "Is this a Microsoft problem right now?" it is good enough. And that is a question you ask yourself in day-to-day support more often than you would like.</p>
+
+    <p>As always, the code is open on GitHub. Feedback and issues are welcome.</p>
+
+    <div class="post-actions">
+      <a class="button" href="https://letmetrythis.dev/CheckMicrosoftEndpoints/">Open the Endpoint Check</a>
+      <a class="button button-secondary" href="https://github.com/roalhelm/CheckMicrosoftEndpoints" rel="noopener" target="_blank">Repository on GitHub</a>
+      <a class="button button-secondary" href="../index-en.html">Back to home</a>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <span class="footer-brand"><img src="../assets/img/logo-256.webp" alt="" width="32" height="32" loading="lazy" />© <span id="year"></span> LetMeTryThis.dev</span>
+    <span class="footer-tagline">Explore · Automate · Improve</span>
+    <span>
+      <a href="../impressum-en.html">Imprint</a>
+      •
+      <a href="../datenschutz-en.html">Privacy</a>
+      •
+      <a href="../apps/leckerbierchen-support-en.html">App support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
