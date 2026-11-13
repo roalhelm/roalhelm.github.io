@@ -55,6 +55,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://letmetrythis.dev/blog/microsoft-service-status-endpoint-check-en.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://letmetrythis.dev/blog/welcome.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
