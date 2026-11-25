@@ -133,6 +133,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://letmetrythis.dev/projects/windows-update-dashboard.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://letmetrythis.dev/projects/windows-update-dashboard-en.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://letmetrythis.dev/blog/leckerbierchen-eu-app-store-launch.html</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
