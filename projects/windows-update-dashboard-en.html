@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
+  <meta name="description" content="Microsoft Update Dashboard: all cumulative Windows 10 and Windows 11 updates with date, KB and build, refreshed daily from Microsoft Support." />
+  <title>Microsoft Update Dashboard | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="../assets/img/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261113" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index-en.html" aria-label="LetMeTryThis.dev homepage">
+      <img src="../assets/img/logo-256.webp" alt="LetMeTryThis.dev Logo" width="48" height="48" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="../index-en.html#blog">Blog</a>
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#apps">Apps</a>
+      <details class="nav-tools">
+        <summary>Tools</summary>
+        <div class="nav-tools-menu">
+          <a href="/CheckMicrosoftEndpoints/">Microsoft Endpoint Check<small>Check Microsoft endpoint reachability and service status</small></a>
+          <a href="/ClientFixPage/">Client Fix Page<small>Find the right script for an unhealthy Windows client</small></a>
+          <a href="/windows-update-dashboard/">Update Dashboard<small>All Windows updates with KB and build, refreshed daily from Microsoft</small></a>
+        </div>
+      </details>
+      <a href="../about-en.html">About</a>
+      <a href="windows-update-dashboard.html" hreflang="de">DE</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
+<main class="page-shell">
+    <p class="eyebrow">Windows Update · GitHub Pages · Microsoft Support</p>
+    <h1>Microsoft Update Dashboard</h1>
+    <p>
+      All cumulative Windows updates at a glance, grouped by product and feature update version. The data
+      is fetched on every build straight from the official update history pages on Microsoft Support, with
+      date, KB number and OS build.
+    </p>
+
+    <div class="pill-row">
+      <span class="status-pill pill-blue">Updated daily</span>
+      <span class="status-pill pill-green">No sign-in</span>
+      <span class="status-pill pill-amber">MIT License</span>
+    </div>
+
+    <p>
+      <a class="button" href="/windows-update-dashboard/">Open dashboard</a>
+      <a class="button button-secondary" href="https://github.com/roalhelm/windows-update-dashboard" rel="noopener" target="_blank">View on GitHub</a>
+    </p>
+
+    <h2>What it shows</h2>
+    <ul class="check-list">
+      <li><strong>Windows 10 and Windows 11</strong> – currently Windows 10 22H2 and Windows 11 23H2, 24H2, 25H2 and 26H2</li>
+      <li><strong>Per update</strong> – release date, KB number, OS build and a link to the Microsoft page</li>
+      <li><strong>Update type</strong> – Security/Quality, Preview and Out-of-band can be filtered separately</li>
+      <li><strong>Search and filter</strong> – by KB, build or version, and by product, year and month</li>
+      <li><strong>Light and dark</strong> – switch the color scheme with one click</li>
+    </ul>
+
+    <h2>How it works</h2>
+    <p>
+      A GitHub Actions workflow runs daily, on every push and on demand. It loads the pages listed in
+      <code>config/sources.json</code> from <code>support.microsoft.com</code>, reads date, KB and build, and
+      generates <code>data/updates.json</code>. The site is then published to GitHub Pages. So the browser does
+      not query Microsoft itself; it gets a fresh static file.
+    </p>
+    <p>
+      If a source fails, the dashboard shows it. If every source fails, nothing is published, so an empty or
+      stale overview never goes live.
+    </p>
+
+    <h2>Data and security</h2>
+    <ul class="check-list">
+      <li><strong>No Microsoft Graph</strong> – no tenant permissions, no app registration, no secrets</li>
+      <li><strong>Official sources only</strong> – allowlist for <code>support.microsoft.com</code>, HTTPS only, timeout and size limit</li>
+      <li><strong>Strict CSP</strong> – the page only loads its own scripts and data</li>
+      <li><strong>Minimal workflow permissions</strong> – <code>contents: read</code>, <code>pages: write</code>, <code>id-token: write</code></li>
+    </ul>
+
+    <h2>Limitations</h2>
+    <p>
+      Microsoft publishes the update history as HTML, not as a stable JSON API. If the markup changes, the
+      parser can break; tests cover the expected format. Office and Teams use other formats and are not
+      included yet. More feature versions are added with one entry in <code>config/sources.json</code>.
+    </p>
+
+    <p>
+      <a class="button" href="/windows-update-dashboard/">Open dashboard</a>
+      <a class="button button-secondary" href="../index-en.html#projects">All projects</a>
+    </p>
+</main>
+  <script src="../assets/js/main.js?v=20261113"></script>
+  <footer class="site-footer">
+    <span class="footer-brand"><img src="../assets/img/logo-256.webp" alt="" width="32" height="32" loading="lazy" />© <span id="year"></span> LetMeTryThis.dev</span>
+    <span class="footer-tagline">Explore · Automate · Improve</span>
+    <span>
+      <a href="../impressum-en.html">Imprint</a>
+      •
+      <a href="../datenschutz-en.html">Privacy</a>
+      •
+      <a href="../apps/leckerbierchen-support-en.html">App support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+</body>
+</html>
