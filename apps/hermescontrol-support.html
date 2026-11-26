@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
+  <meta name="description" content="Support für Hermes Control, die iPhone- und iPad-App für den selbst gehosteten KI-Agenten Hermes Agent." />
+  <title>Hermes Control Support | LetMeTryThis.dev</title>
+  <link rel="icon" href="../assets/img/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="../assets/img/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261113" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="LetMeTryThis.dev Startseite">
+      <img src="../assets/img/logo-256.webp" alt="LetMeTryThis.dev Logo" width="48" height="48" />
+      <span>LetMeTryThis.dev</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+      <a href="../index.html#blog">Blog</a>
+      <a href="../index.html#projects">Projekte</a>
+      <a href="../index.html#apps">Apps</a>
+      <details class="nav-tools">
+        <summary>Tools</summary>
+        <div class="nav-tools-menu">
+          <a href="/CheckMicrosoftEndpoints/">Microsoft Endpoint Check<small>Erreichbarkeit der Microsoft-Endpunkte und den Service-Status prüfen</small></a>
+          <a href="/ClientFixPage/">Client Fix Page<small>Das passende Script für einen ungesunden Windows-Client finden</small></a>
+          <a href="/windows-update-dashboard/">Update Dashboard<small>Alle Windows-Updates mit KB und Build, täglich frisch von Microsoft</small></a>
+        </div>
+      </details>
+      <a href="../about.html">About</a>
+      <a href="hermescontrol-support-en.html" hreflang="en">EN</a>
+      <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
+<main class="page-shell">
+    <p class="eyebrow">Hermes Control</p>
+    <img class="app-icon" src="../assets/img/apps/hermescontrol/hermescontrol-icon.png" alt="App-Icon von Hermes Control" width="88" height="88" />
+    <h1>Support &amp; Hilfe</h1>
+    <p>
+      Hermes Control ist eine iPhone- und iPad-App für Hermes Agent, den selbst gehosteten KI-Agenten auf deinem Mac oder Server. Die App verbindet sich direkt mit dem Hermes-Dashboard auf deinem eigenen Rechner, ohne Cloud-Dienst dazwischen.
+    </p>
+
+    <h2>Was die App kann</h2>
+    <ul>
+      <li>Chats mit deinem Agenten führen, Antworten live verfolgen und abbrechen</li>
+      <li>Werkzeugaufrufe, die eine Freigabe brauchen, direkt bestätigen</li>
+      <li>Chats durchsuchen, anpinnen, archivieren und löschen</li>
+      <li>Profile mit Modell und Skills ansehen und darin neue Chats starten</li>
+      <li>Cron-Jobs ansehen, pausieren, fortsetzen, sofort ausführen und anlegen</li>
+      <li>Verbindungsstatus, Hermes-Version und verbundene Messenger auf einen Blick</li>
+    </ul>
+
+    <h2>Einrichtung</h2>
+    <ol>
+      <li>Auf dem Rechner mit Hermes Agent ein Session-Token festlegen (Umgebungsvariable <code>HERMES_DASHBOARD_SESSION_TOKEN</code>).</li>
+      <li>Das Dashboard im Netzwerk erreichbar starten, zum Beispiel <code>hermes dashboard --host 0.0.0.0 --port 9119</code>.</li>
+      <li>In der App unter Einstellungen ein Gateway hinzufügen: IP-Adresse oder Hostname des Rechners und das Token eintragen.</li>
+      <li>Mit „Verbindung testen“ prüfen, dann sichern.</li>
+    </ol>
+    <p>
+      Außerhalb deines WLANs empfehle ich eine verschlüsselte Verbindung per HTTPS, zum Beispiel über ein VPN oder Tailscale.
+    </p>
+
+    <h2>Häufige Probleme</h2>
+    <ul>
+      <li><strong>Keine Verbindung:</strong> Läuft das Dashboard, und ist es nicht nur an 127.0.0.1 gebunden? Sind iPhone und Rechner im selben Netz? Hat die App unter iOS-Einstellungen „Lokales Netzwerk“ die Erlaubnis?</li>
+      <li><strong>Fehler 401 oder 403:</strong> Das Token in der App stimmt nicht mit dem Token auf dem Rechner überein.</li>
+      <li><strong>Chats laden, aber Antworten kommen nicht:</strong> Prüfe, ob Hermes Agent selbst ein funktionierendes Modell konfiguriert hat.</li>
+    </ul>
+
+    <h2>Datenschutz</h2>
+    <ul>
+      <li>Die App erhebt keine Daten, nutzt kein Tracking und braucht kein Konto.</li>
+      <li>Alle Inhalte werden nur zwischen deinem Gerät und deinem eigenen Hermes-Server übertragen.</li>
+      <li>Das Token wird im iOS-Schlüsselbund gespeichert.</li>
+    </ul>
+    <p>
+      Details stehen in der <a href="../datenschutz.html">Datenschutzerklärung</a>.
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      Support per E-Mail: <a href="mailto:support@letmetrythis.dev">support@letmetrythis.dev</a>
+    </p>
+    <p>
+      Damit ich dir schneller helfen kann, schicke bitte mit:
+    </p>
+    <ul>
+      <li>Kurze Beschreibung des Problems und was du erwartet hast</li>
+      <li>Schritte, mit denen sich das Verhalten nachstellen lässt</li>
+      <li>Gerätetyp, iOS-Version und Hermes-Version (steht in der App unter Einstellungen)</li>
+      <li>Optional einen Screenshot (bitte ohne Token)</li>
+    </ul>
+    <p>
+      Hermes Control ist ein unabhängiges Projekt und kein offizielles Produkt von Nous Research.
+    </p>
+
+    <p>
+      <a class="button button-secondary" href="index.html">Zurück zum App-Bereich</a>
+      <a class="button button-secondary" href="hermescontrol-support-en.html">English version</a>
+      <a class="button button-secondary" href="../datenschutz.html">Datenschutz</a>
+    </p>
+  </main>
+  <footer class="site-footer">
+    <span class="footer-brand"><img src="../assets/img/logo-256.webp" alt="" width="32" height="32" loading="lazy" />© <span id="year"></span> LetMeTryThis.dev</span>
+    <span class="footer-tagline">Explore · Automate · Improve</span>
+    <span>
+      <a href="../impressum.html">Impressum</a>
+      •
+      <a href="../datenschutz.html">Datenschutz</a>
+      •
+      <a href="../apps/leckerbierchen-support.html">App Support</a>
+      •
+      <a href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
+      •
+      <a href="https://www.linkedin.com/in/ronny-alhelm-3aa28910b" rel="noopener" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
+  <script src="../assets/js/main.js?v=20261113"></script>
+</body>
+</html>
