@@ -16,12 +16,16 @@
   <meta property="article:tag" content="iOS" />
   <meta property="article:tag" content="Tailscale" />
   <link rel="canonical" href="https://letmetrythis.dev/blog/hermes-control-ki-server-vom-iphone-steuern.html" />
+  <link rel="alternate" hreflang="de" href="https://letmetrythis.dev/blog/hermes-control-ki-server-vom-iphone-steuern.html" />
+  <link rel="alternate" hreflang="en" href="https://letmetrythis.dev/blog/hermes-control-local-ai-server-from-iphone-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://letmetrythis.dev/blog/hermes-control-ki-server-vom-iphone-steuern.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Hermes Control: Meinen lokalen KI-Server vom iPhone aus steuern" />
   <meta property="og:description" content="Meine neue iPhone-App für Hermes Agent: Chats, Profile und Cron-Jobs meines KI-Servers von unterwegs steuern, sicher über Tailscale." />
   <meta property="og:url" content="https://letmetrythis.dev/blog/hermes-control-ki-server-vom-iphone-steuern.html" />
   <meta property="og:site_name" content="LetMeTryThis.dev" />
   <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:image" content="https://letmetrythis.dev/assets/img/social-preview-hermes-control.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="627" />
@@ -132,6 +136,7 @@
         </div>
       </details>
       <a href="../about.html">About</a>
+      <a href="hermes-control-local-ai-server-from-iphone-en.html" hreflang="en">EN</a>
       <a class="button button-small" href="https://github.com/roalhelm" rel="noopener" target="_blank">GitHub</a>
     </nav>
   </header>
@@ -139,16 +144,16 @@
     <p class="eyebrow">AI · iOS · Tailscale · 27. November 2026</p>
     <h1>Hermes Control: Meinen lokalen KI-Server vom iPhone aus steuern</h1>
 
-    <p>Auf meinem Mac mini zu Hause läuft seit einiger Zeit ein eigener KI-Agent: <strong>Hermes Agent</strong>. Er sortiert Rechnungen aus dem Postfach, plant Termine, hilft beim Programmieren und schneidet Videos vor. Das Problem: All das konnte ich bisher nur am Schreibtisch anstoßen. Genau das ändert meine neue App <strong>Hermes Control</strong>. Damit habe ich meinen lokalen KI-Server jetzt auch unterwegs in der Tasche.</p>
+    <p>Auf dem Mac mini in meinem Homeoffice läuft seit einiger Zeit ein eigener KI-Agent: <strong>Hermes Agent</strong>. Er sortiert Rechnungen aus dem Postfach, plant Termine, hilft beim Programmieren und schneidet Videos vor. Das Problem: All das konnte ich bisher nur am Schreibtisch anstoßen. Genau das ändert meine neue App <strong>Hermes Control</strong>. Damit habe ich meinen lokalen KI-Server jetzt auch unterwegs in der Tasche.</p>
 
     <figure class="post-figure">
       <a href="../assets/img/social-preview-hermes-control.png" target="_blank" rel="noopener"><img src="../assets/img/social-preview-hermes-control.png" alt="Hermes Control auf zwei iPhones: links ein Chat mit dem Agenten, rechts die Übersicht mit Status des Mac mini, aktiven Chats, Cron-Jobs und Profilen" width="1200" height="627" /></a>
       <figcaption>Hermes Control: die Übersicht und ein laufender Chat mit meinem Agenten.</figcaption>
     </figure>
 
-    <h2>Die Idee: Der KI-Agent bleibt zu Hause, die Steuerung kommt mit</h2>
+    <h2>Die Idee: Der KI-Agent bleibt im Homeoffice, die Steuerung kommt mit</h2>
     <p>Mir war von Anfang an wichtig, dass mein Agent lokal läuft. Die Daten, auf die er zugreift, also Mails, Kalender, Dateien und Projekte, liegen bei mir und nicht bei einem weiteren Cloud-Dienst. Hermes Agent ist ein selbst gehosteter KI-Agent, der mit verschiedenen Modellen arbeiten kann und über Skills und Werkzeuge echte Aufgaben erledigt.</p>
-    <p>Der Haken an „lokal“: Der Agent ist nur so nützlich, wie ich ihn erreichen kann. Gerade die spannenden Momente passieren unterwegs. Im Zug fällt mir ein, dass ein Report noch fehlt. Beim Kunden will ich kurz wissen, ob der nächtliche Cron-Job durchgelaufen ist. Oder ich möchte einfach eine Idee loswerden, bevor sie wieder weg ist.</p>
+    <p>Der Haken an „lokal“: Der Agent ist nur so nützlich, wie ich ihn erreichen kann. Gerade die spannenden Momente passieren unterwegs. Am Gate vor dem Abflug fällt mir ein, dass ein Report noch fehlt. Nach der Autofahrt zum Kunden will ich kurz wissen, ob der nächtliche Cron-Job durchgelaufen ist. Oder ich möchte einfach eine Idee loswerden, bevor sie wieder weg ist.</p>
     <p>Die Lösung sollte deshalb zwei Dinge verbinden: Der Agent und die Daten bleiben auf meiner eigenen Hardware, und ich habe trotzdem überall Zugriff, ohne meinen Mac mini ins offene Internet zu stellen.</p>
 
     <h2>Was Hermes Control kann</h2>
@@ -179,7 +184,7 @@
 
     <h2>So kommt das iPhone sicher zum Mac mini</h2>
     <p>Die spannendste Frage war nicht die App, sondern der Weg dorthin. Einen Port im Router zu öffnen und das Dashboard meines Agenten ins Internet zu hängen, kam für mich nicht in Frage. Ein KI-Agent mit Zugriff auf Mails und Dateien ist genau die Art von Dienst, die niemand außer mir erreichen soll.</p>
-    <p>Deshalb läuft die Verbindung über <a href="https://tailscale.com" rel="noopener" target="_blank">Tailscale</a>. Tailscale baut ein privates Netz zwischen meinen eigenen Geräten auf, das sogenannte Tailnet. Darin sind nur Geräte, die ich selbst angemeldet habe. Die Verbindung ist mit WireGuard verschlüsselt, egal ob das iPhone gerade im Mobilfunk, im Hotel-WLAN oder zu Hause hängt.</p>
+    <p>Deshalb läuft die Verbindung über <a href="https://tailscale.com" rel="noopener" target="_blank">Tailscale</a>. Tailscale baut ein privates Netz zwischen meinen eigenen Geräten auf, das sogenannte Tailnet. Darin sind nur Geräte, die ich selbst angemeldet habe. Die Verbindung ist mit WireGuard verschlüsselt, egal ob das iPhone gerade im Mobilfunk, im WLAN am Flughafen, im Hotel oder im Homeoffice hängt.</p>
 
     <figure class="post-figure" style="max-width: 780px;">
       <a href="../assets/img/hermes-control-architektur.webp" target="_blank" rel="noopener"><img src="../assets/img/hermes-control-architektur.webp" alt="Architektur: Hermes Control auf dem iPhone verbindet sich über ein privates Tailscale-Tailnet mit WireGuard und HTTPS zum Mac mini. Dort leitet tailscale serve an die Hermes Dashboard API weiter, dahinter läuft Hermes Agent mit den Profilen default, codebot und videoeditor." width="1600" height="960" loading="lazy" /></a>
